@@ -4,6 +4,7 @@
 #define GRASSLAND_H
 
 class Grassland : public Land{
-    Grassland();
+    public:
+        Grassland();
 };
 #endif

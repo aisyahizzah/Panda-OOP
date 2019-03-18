@@ -4,6 +4,7 @@
 #define COOP_H
 
 class Coop : public Land{
-    Coop();
+    public:
+        Coop();
 };
 #endif

@@ -4,7 +4,10 @@
 #define MIXER_H
 
 class Mixer : public Facility{
-    Mixer();
+    public:
+        Mixer();
+        Mixer(Cell M);
+        
 };
 
 #endif

@@ -4,7 +4,9 @@
 #define TRUCK_H
 
 class Truck : public Facility{
-    Truck();
+    public:
+        Truck();
+        Truck(Cell T);
 };
 
 #endif

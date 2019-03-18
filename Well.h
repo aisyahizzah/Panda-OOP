@@ -4,7 +4,9 @@
 #define WELL_H
 
 class Well : public Facility{
-    Well();
+    public:
+        Well();
+        Well(Cell W);
 };
 
 #endif

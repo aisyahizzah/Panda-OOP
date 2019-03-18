@@ -4,7 +4,8 @@
 #define FACILITY_H
 
 class Facility : public Cell{
-	Facility();
+	public:
+		Facility();
 };
 
 #endif

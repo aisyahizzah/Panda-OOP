@@ -1,4 +1,10 @@
 #include "Cell.h"
+#include "Mixer.h"
+#include "Well.h"
+#include "Coop.h"
+#include "Barn.h"
+#include "Grassland.h"
+
 #include "Truck.h"
 
 using namespace std;
@@ -11,29 +17,30 @@ int main(){
 	}
 
 	Truck truk(peta[1][1]);
-	truk.kategori = Truck;
+	truk.SetKategori("Truck");
 
 	Mixer mixer(peta[2][1]);
-	mixer.kategori = Mixer;
+	mixer.SetKategori("Mixer");
 
 	Well well(peta[3][1]);
-	well.kategori = Well;
+	well.SetKategori("Well");
 
 	Coop coop[3 + 1][9 + 1];
 	Barn barn[7 + 1][5 + 1];
 	Grassland grass[7 + 1][5 + 1];
 
+	//COOP
 	for (int i = 1; i <= 4; i++){
 		for (int  j = 1; j <= 10; j++){
-			coop[i][j] = peta[i][j + 1];
+			peta[i][j + 1].SetKategori("Coop");
 		}
 	}
 
+	//BARN dan GRASSLAND
 	for (int i = 1; i <= 8; i++){
 		for (int  j = 1; j <= 6; j++){
-			barn[i][j] = peta[i + 3][j];
-			grass[i][j] = peta[i + 3][j + 5];
-
+			peta[i + 3][j].SetKategori("Barn");
+			peta[i + 3][j + 5].SetKategori("Grass");
 		}
 	}
 
