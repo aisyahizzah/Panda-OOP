@@ -4,3 +4,5 @@
 - buat peta dan coop, grassland, dan barn terlebih dahulu
 - import ke player dan hewan
 
+Nando : clone
+
