@@ -1,0 +1,6 @@
+15 Maret
+- buat sebuah peta berbasis Cell
+- buat array Coop, Grassland, dan Barn dengan posisi relatif thp peta
+- buat peta dan coop, grassland, dan barn terlebih dahulu
+- import ke player dan hewan
+
