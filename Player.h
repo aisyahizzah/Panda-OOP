@@ -12,33 +12,23 @@ class Player: public Object{
 		// ctor
 		Player();
 
-		//cctor
-		Player(const Player& P);
-		
 		//dtor
 		~Player();
-		
-		//assignment
-		Player& operator=(const Player& P);
-		
+				
 		//getter
 		int getWadahAir();
-		int getElTas(int indeks);
 		int getNeffTas();
 		
 		//setter
 		void setWadahAir(int _WadahAir);
-		void setElTas(int indeks, int element);
 		
 		bool isTasFull();
 		bool isTasEmpty();
-		bool isElement(int element);
 		bool isWadahAirFull();
 		bool isWadahAirEmpty();
-		
+
 		void addProduk(Produk P);
-		void removeProduk(Produk P);
-		int findProduk(Produk P);
+		void removeProduk(int indeks);
 		
 		// Methods
 		void Talk();
@@ -48,11 +38,10 @@ class Player: public Object{
 		void Mix();
 
 		//Move
-
-		void Up();
-		void Down();
-		void Left();
-		void Right();
+		void MoveUp();
+		void MoveDown();
+		void MoveLeft();
+		void MoveRight();
 		
 };
 
