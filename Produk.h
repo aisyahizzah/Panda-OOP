@@ -2,7 +2,15 @@
 #define PRODUK_H
 
 class Produk{
-    Produk();
+    private:
+        static int  n_produk;
+    public:
+        Produk();
+        ~Produk();
+        static int Get_N_Produk();
+
+
+
 };
 
 #endif
