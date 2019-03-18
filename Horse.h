@@ -8,5 +8,6 @@ class Horse : public MilkProducing, MeatProducing{
         Horse();
         ~Horse();
         void makeVoice();
+}
 
 #ENDIF
