@@ -3,11 +3,14 @@
 #define PLAYER_H
 #include "Produk.h"
 #include "Object.h"
+#include <list>
+using namespace std;
 
 class Player: public Object{
 	private:
 		int WadahAir;
-		Produk Tas[25];
+		list <Produk> Tas;
+		int size_tas;
 		
 	public:
 		// ctor
