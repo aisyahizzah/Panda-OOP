@@ -1,15 +1,15 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-
 #include "Produk.h"
 #include "Object.h"
-#include <list>
+#include "LinkedList.h"
+
 using namespace std;
 
 class Player: public Object{
 	private:
 		int WadahAir;
-		list <Produk> Tas;
+		LinkedList <Produk> Tas;
 		int size_tas;
 		
 	public:
