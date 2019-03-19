@@ -2,6 +2,8 @@
 #define CHICKEN_H
 
 #include "FarmAnimal.h"
+#include "EggProducing.h"
+#include "MeatProducing.h"
 
 class Chicken : public EggProducing, MeatProducing{
     public :
