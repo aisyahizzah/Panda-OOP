@@ -11,6 +11,6 @@ class FarmAnimal : public Object{
         virtual void moveRandom()=0;
         virtual void makeVoice()=0;
         virtual void eat()=0;
-}
+};
 
 #endif
