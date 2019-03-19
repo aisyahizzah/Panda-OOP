@@ -11,9 +11,6 @@ class Produk{
         int getHarga();
         void setHarga();
         static int Get_N_Produk();
-
-
-
 };
 
 #endif
