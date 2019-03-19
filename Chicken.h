@@ -1,5 +1,5 @@
-#IFNDEF CHICKEN_H
-#DEFINE CHICKEN_H
+#ifndef CHICKEN_H
+#define CHICKEN_H
 
 #include "FarmAnimal.h"
 
@@ -8,6 +8,6 @@ class Chicken : public EggProducing, MeatProducing{
         Chicken();
         ~Chicken();
         void makeVoice();
-}
+};
 
-#ENDIF
+#endif

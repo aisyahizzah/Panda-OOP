@@ -1,5 +1,7 @@
-#IFNDEF FARMANIMAL_H
-#DEFINE FARMANIMAL_H
+#ifndef FARMANIMAL_H
+#define FARMANIMAL_H
+
+#include "Object.h"
 
 class FarmAnimal : public Object{
     private :
@@ -11,4 +13,4 @@ class FarmAnimal : public Object{
         virtual void eat()=0;
 }
 
-#ENDIF
+#endif

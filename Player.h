@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include "Produk.h"
 #include "Object.h"
 #include <list>
