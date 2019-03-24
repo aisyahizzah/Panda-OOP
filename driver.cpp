@@ -16,7 +16,5 @@ int main(){
 		peta[i] = new Cell[N+1];
 	}
 
-	
-
 	return 0;
 }
