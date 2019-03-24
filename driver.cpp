@@ -1,3 +1,5 @@
+//g++ driver.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp -o main
+
 #include "Cell.h"
 #include "Mixer.h"
 #include "Well.h"
@@ -7,7 +9,7 @@
 #include "Truck.h"
 #include "Player.h"
 #include "Land.h"
-#include "Object.cpp"
+#include "Object.h"
 #include <iostream>
 
 using namespace std;
@@ -21,7 +23,7 @@ int main(){
 	}
 	*/
 
-	/*
+	
 	int start = 0;
 	int move;
 	
@@ -48,9 +50,15 @@ int main(){
 		}
 		cout << p->getX() << "," << p->getY() << endl;
 	}
-	*/
+	
+	Truck *t;
+	Mixer *m;
+	Well *w;
 
-	/*
+	t = new Truck();
+	m = new Mixer();
+	w = new Well(); 
+	
 	Barn *b[6][6];
 	for (int i = 1; i <= 5; i++){
 		for (int j = 1; j <= 5; j++){
@@ -65,7 +73,7 @@ int main(){
 		}
 	}
 
-	Coop *c[4][11];
+	Coop *c[4][10];
 	for (int i = 1; i <= 3; i++){
 		for (int j = 1; j <= 10; j++){
 			c[i][j] = new Coop(i,j);
@@ -73,23 +81,31 @@ int main(){
 	}
 
 	for (int i = 1; i <= 3; i++){
-		cout << "Facility" << " ";
-		for (int j = 1; j <= 10; j++){
-			cout << c[i][j]->getKategori() << " ";
+		if (i == 1){
+			cout << t->getKategori() << " ";		
+		}
+		else if (i == 2){
+			cout << m->getKategori() << " ";		
+		}
+		else{
+			cout << w->getKategori() << "  ";		
+		}
+		for (int j = 1; j <= 9; j++){
+			cout << c[i][j]->getKategori() << "  ";
 		}
 		cout << endl;
 	}
 
 	for (int i = 1; i <= 5; i++){
 		for (int j = 1; j <= 5; j++){
-			cout << b[i][j]->getKategori() << " ";
+			cout << b[i][j]->getKategori() << "  ";
 		}
 		for (int j = 1; j <= 5; j++){
 			cout << g[i][j]->getKategori() << " ";
 		}
 		cout << endl;
 	}
-	*/
+	
 
 	return 0;
 }

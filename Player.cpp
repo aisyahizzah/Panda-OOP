@@ -51,7 +51,7 @@ void Player::Talk(){
 
 }
 void Player::Interact(){
-
+     
 }
 void Player::Kill(){
 
