@@ -2,15 +2,16 @@
 #define OBJECT_H
 class Object{
     private:
-        int X;
-        int Y;
+        int x;
+        int y;
     public:
+        Object();
         Object(int, int);
         //Getter
-        int GetX();
-        int GetY();
+        int getX();
+        int getY();
         //Setter
-        void SetXY(int, int);
+        void setXY(int, int);
 };
 
 #endif
