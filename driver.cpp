@@ -23,9 +23,34 @@ int main(){
 		}
 	}
 
+	Grassland *g[6][6];
+	for (int i = 1; i <= 5; i++){
+		for (int j = 1; j <= 5; j++){
+			g[i][j] = new Grassland(i,j);
+		}
+	}
+
+	Coop *c[4][11];
+	for (int i = 1; i <= 3; i++){
+		for (int j = 1; j <= 10; j++){
+			c[i][j] = new Coop(i,j);
+		}
+	}
+
+	for (int i = 1; i <= 3; i++){
+		cout << "Facility" << " ";
+		for (int j = 1; j <= 10; j++){
+			cout << c[i][j]->getKategori() << " ";
+		}
+		cout << endl;
+	}
+
 	for (int i = 1; i <= 5; i++){
 		for (int j = 1; j <= 5; j++){
 			cout << b[i][j]->getKategori() << " ";
+		}
+		for (int j = 1; j <= 5; j++){
+			cout << g[i][j]->getKategori() << " ";
 		}
 		cout << endl;
 	}

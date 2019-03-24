@@ -6,5 +6,6 @@
 class Coop : public Land{
     public:
         Coop();
+        Coop(int, int );
 };
 #endif

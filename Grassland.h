@@ -6,5 +6,6 @@
 class Grassland : public Land{
     public:
         Grassland();
+        Grassland(int ,int );
 };
 #endif
