@@ -16,6 +16,7 @@ class Cell {
 		Cell();
 
 		void SetKategori(string value);
+		string getKategori();
 };
 
 #endif

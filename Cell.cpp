@@ -7,3 +7,7 @@ Cell::Cell(){
 void Cell::SetKategori(string value){
     kategori = value;
 }
+
+string Cell::getKategori(){
+    return kategori;
+}
