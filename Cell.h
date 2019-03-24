@@ -10,6 +10,8 @@ class Cell {
 			kategori : Facility & Land
 			Coop, Barn, Grass, Mixer, Truck, Well
 		*/
+		int x;
+		int y;
 		string kategori;
 
 	public:
@@ -17,6 +19,12 @@ class Cell {
 
 		void SetKategori(string value);
 		string getKategori();
+
+		int getX();
+		int getY();
+
+		void setX(int);
+		void setY(int);
 };
 
 #endif
