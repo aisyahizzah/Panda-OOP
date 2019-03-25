@@ -1,5 +1,8 @@
-#IFNDEF EGGPRODUCING_H
-#DEFINE EGGPRODUCING_H
+#ifndef EGGPRODUCING_H
+#define EGGPRODUCING_H
+
+#include "FarmAnimal.h"
+#include "Coop.h"
 
 class EggProducing : public FarmAnimal{
     private :
@@ -8,10 +11,10 @@ class EggProducing : public FarmAnimal{
         EggProducing();
         void moveRandom();
         void makeVoice();
-        void eat();
+        void eat(Coop);
         void gotInteracted();
         bool getProduceEgg();
         void setProduceEgg(bool );
-}
+};
 
-#ENDIF
+#endif

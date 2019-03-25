@@ -1,13 +1,15 @@
-#IFNDEF HORSE_H
-#DEFINE HORSE_H
+#ifndef HORSE_H
+#define HORSE_H
 
 #include "FarmAnimal.h"
+#include "MilkProducing.h"
+#include "MeatProducing.h"
 
 class Horse : public MilkProducing, MeatProducing{
     public :
         Horse();
         ~Horse();
         void makeVoice();
-}
+};
 
-#ENDIF
+#endif

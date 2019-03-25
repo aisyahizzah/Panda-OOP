@@ -13,8 +13,8 @@ void MilkProducing::makeVoice(){
 
 }
 void MilkProducing::eat(Grassland g){
-    if (g->IsRumputExist()){
-        g->SetRumput(false);
+    if (g.IsRumputExist()){
+        g.SetRumput(false);
         setHungry(5);
         setProduceMilk(true);
     }

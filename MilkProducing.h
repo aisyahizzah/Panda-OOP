@@ -1,5 +1,8 @@
-#IFNDEF MILKPRODUCING_H
-#DEFINE MILKPRODUCING_H
+#ifndef MILKPRODUCING_H
+#define MILKPRODUCING_H
+
+#include "FarmAnimal.h"
+#include "Grassland.h"
 
 class MilkProducing : public FarmAnimal{
     private :
@@ -8,10 +11,10 @@ class MilkProducing : public FarmAnimal{
         MilkProducing();
         void moveRandom();
         void makeVoice();
-        void eat();
+        void eat(Grassland);
         void gotInteracted();
         bool getProduceMilk();
         void setProduceMilk(bool );
-}
+};
 
-#ENDIF
+#endif

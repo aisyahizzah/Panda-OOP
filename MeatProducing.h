@@ -1,13 +1,16 @@
-#IFNDEF MEATPRODUCING_H
-#DEFINE MEATPRODUCING_H
+#ifndef MEATPRODUCING_H
+#define MEATPRODUCING_H
+
+#include "FarmAnimal.h"
+#include "Barn.h"
 
 class MeatProducing : public FarmAnimal{
     public :
         MeatProducing();
         void moveRandom();
         void makeVoice();
-        void eat();
+        void eat(Barn);
         void gotKilled();
-}
+};
 
-#ENDIF
+#endif

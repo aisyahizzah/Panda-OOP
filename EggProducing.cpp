@@ -13,8 +13,8 @@ void EggProducing::makeVoice(){
 
 }
 void EggProducing::eat(Coop c){
-    if (c->IsRumputExist()){
-        c->SetRumput(false);
+    if (c.IsRumputExist()){
+        c.SetRumput(false);
         setHungry(5);
         setProduceEgg(true);
     }

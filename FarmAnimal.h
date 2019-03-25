@@ -7,10 +7,10 @@ class FarmAnimal : public Object{
     private :
         int hungry;
     public :
-        virtual ~FarmAnimal();
-        virtual void moveRandom()=0;
-        virtual void makeVoice()=0;
-        virtual void eat()=0;
+        ~FarmAnimal();
+        void moveRandom();
+        void makeVoice();
+        void eat();
         int getHungry();
         void setHungry(int);
 };

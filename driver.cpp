@@ -10,6 +10,16 @@
 #include "Player.h"
 #include "Land.h"
 #include "Object.h"
+#include "FarmAnimal.h"
+#include "MeatProducing.h"
+#include "MilkProducing.h"
+#include "EggProducing.h"
+#include "Chicken.h"
+#include "Cow.h"
+#include "Duck.h"
+#include "Goat.h"
+#include "Horse.h"
+#include "Lamb.h"
 #include <iostream>
 
 using namespace std;
@@ -50,7 +60,38 @@ int main(){
 		}
 		cout << p->getX() << "," << p->getY() << endl;
 	}
+
+	Chicken *c1;
+	c1 = new Chicken();
+	c1->makeVoice();
+	cout << c1->getProduceEgg() << endl;
+
+	Cow *cw1;
+	cw1 = new Cow();
+	cw1->makeVoice();
+	cout << cw1->getProduceMilk() << endl;
+
+	Duck *d1;
+	d1 = new Duck();
+	d1->makeVoice();
+	cout << d1->getProduceEgg() << endl;
 	
+	Goat *g1;
+	g1 = new Goat();
+	g1->makeVoice();
+	cout << g1->getProduceMilk() << endl;
+	
+	Horse *h1;
+	h1 = new Horse();
+	h1->makeVoice();
+	cout << h1->getProduceMilk() << endl;
+
+	Lamb *l1;
+	l1 = new Lamb();
+	l1->makeVoice();
+	cout << l1->getProduceMilk() << endl;
+
+	/*
 	Truck *t;
 	Mixer *m;
 	Well *w;
@@ -105,7 +146,7 @@ int main(){
 		}
 		cout << endl;
 	}
-	
+	*/
 
 	return 0;
 }
