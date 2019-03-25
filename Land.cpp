@@ -13,9 +13,9 @@ bool Land::IsRumputExist(){
     return rumput;
 }
 
-void Land::SetOccupied(){
-
+void Land::SetOccupied(bool b){
+    occupied = b;
 }
-void Land::SetRumput(){
-
+void Land::SetRumput(bool b){
+    rumput = b;
 }

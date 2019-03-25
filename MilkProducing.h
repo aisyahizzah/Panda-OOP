@@ -10,6 +10,8 @@ class MilkProducing : public FarmAnimal{
         void makeVoice();
         void eat();
         void gotInteracted();
+        bool getProduceMilk();
+        void setProduceMilk(bool );
 }
 
 #ENDIF

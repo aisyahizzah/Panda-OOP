@@ -14,8 +14,8 @@ class Land : public Cell{
     	bool IsOccupied();
     	bool IsRumputExist();
 
-    	void SetOccupied();
-    	void SetRumput();
+    	void SetOccupied(bool );
+    	void SetRumput(bool );
 };
 
 #endif
