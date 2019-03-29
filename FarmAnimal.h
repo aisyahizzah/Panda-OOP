@@ -8,9 +8,9 @@ class FarmAnimal : public Object{
         int hungry;
     public :
         ~FarmAnimal();
-        void moveRandom();
-        void makeVoice();
-        void eat();
+        virtual void moveRandom()=0;
+        virtual void makeVoice()-0;
+        virtual void eat()=0;
         int getHungry();
         void setHungry(int);
 };
