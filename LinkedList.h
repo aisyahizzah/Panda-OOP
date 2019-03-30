@@ -96,5 +96,37 @@ class LinkedList {
 			
 			cout<<endl;
 		}
+		
+		int removeAll(){
+			int sum = 0;
+			int i =1;
+			int size = count();
+			while (i <= size){
+				sum += get(1);
+				remove(get(1));
+				i++;
+			}
+			return sum;
+		}
+		
+		int count(){
+			ElmtList<T> *temp = first;
+			
+			int counting = 0;
+			if (isEmpty()){
+				counting = 0;
+			}else{
+				if (first == last){
+					counting = 1;
+				}else{
+					while (temp != NULL){
+						counting++;
+						temp = temp->next;
+					}
+				}
+			}
+			
+			return counting;
+		}
 
 };
