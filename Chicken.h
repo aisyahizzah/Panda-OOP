@@ -5,9 +5,10 @@
 #include "EggProducing.h"
 #include "MeatProducing.h"
 
-class Chicken : public EggProducing, MeatProducing, Object{
+class Chicken : public EggProducing, public MeatProducing, public Object{
     public :
         Chicken();
+        Chicken(int ,int );
         ~Chicken();
         void moveRandom();
         void makeVoice();

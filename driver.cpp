@@ -65,6 +65,13 @@ int main(){
 	c1 = new Chicken();
 	c1->makeVoice();
 	cout << c1->getProduceEgg() << endl;
+	cout << c1->getX() << "," << c1->getY() << endl;
+
+	Chicken *c2;
+	c2 = new Chicken(5,5);
+	c2->makeVoice();
+	cout << c2->getProduceEgg() << endl;
+	cout << c2->getX() << "," << c2->getY() << endl;
 
 	Cow *cw1;
 	cw1 = new Cow();

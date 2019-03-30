@@ -5,7 +5,7 @@
 #include "MilkProducing.h"
 #include "MeatProducing.h"
 
-class Cow : public MilkProducing, MeatProducing, Object{
+class Cow : public MilkProducing, public MeatProducing, public Object{
     public :
         Cow();
         ~Cow();
