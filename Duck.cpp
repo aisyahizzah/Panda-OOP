@@ -8,18 +8,18 @@ Duck::~Duck(){
     
 }
 
-void Chicken::moveRandom(){
+void Duck::moveRandom(){
 
 }
         
-void Chicken::makeVoice(){
-    cout << "Chicken" << endl;
+void Duck::makeVoice(){
+    cout << "Duck" << endl;
 }
 
-void Chicken::eat(){
+void Duck::eat(){
 
 }
 
-void Chicken::gotInteracted(){
+void Duck::gotInteracted(){
 
 }

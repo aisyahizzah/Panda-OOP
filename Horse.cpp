@@ -7,6 +7,18 @@ Horse::Horse(){
 Horse::~Horse(){
     
 }
+void Horse::moveRandom(){
+
+}
+        
 void Horse::makeVoice(){
-    cout << "Hihi" << endl;
+    cout << "Horse" << endl;
+}
+
+void Horse::eat(){
+
+}
+
+void Horse::gotInteracted(){
+
 }

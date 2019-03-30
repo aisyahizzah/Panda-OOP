@@ -7,6 +7,18 @@ Goat::Goat(){
 Goat::~Goat(){
     
 }
+void Goat::moveRandom(){
+
+}
+        
 void Goat::makeVoice(){
-    cout << "Mbekk" << endl;
+    cout << "Goat" << endl;
+}
+
+void Goat::eat(){
+
+}
+
+void Goat::gotInteracted(){
+
 }

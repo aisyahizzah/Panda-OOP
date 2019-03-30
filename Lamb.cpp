@@ -7,6 +7,18 @@ Lamb::Lamb(){
 Lamb::~Lamb(){
     
 }
+void Lamb::moveRandom(){
+
+}
+        
 void Lamb::makeVoice(){
-    cout << "Mekkk" << endl;
+    cout << "Lamb" << endl;
+}
+
+void Lamb::eat(){
+
+}
+
+void Lamb::gotInteracted(){
+
 }
