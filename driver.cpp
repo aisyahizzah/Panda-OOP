@@ -1,4 +1,4 @@
-//g++ driver.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp -o main
+//g++ driver.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp -o main 
 
 #include "Cell.h"
 #include "Mixer.h"
@@ -91,7 +91,6 @@ int main(){
 	l1->makeVoice();
 	cout << l1->getProduceMilk() << endl;
 
-	/*
 	Truck *t;
 	Mixer *m;
 	Well *w;
@@ -100,23 +99,23 @@ int main(){
 	m = new Mixer();
 	w = new Well(); 
 	
-	Barn *b[6][6];
+	Barn *b[6][8];
 	for (int i = 1; i <= 5; i++){
-		for (int j = 1; j <= 5; j++){
+		for (int j = 1; j <= 7; j++){
 			b[i][j] = new Barn(i,j);
 		}
 	}
 
-	Grassland *g[6][6];
+	Grassland *g[6][8];
 	for (int i = 1; i <= 5; i++){
-		for (int j = 1; j <= 5; j++){
+		for (int j = 1; j <= 7; j++){
 			g[i][j] = new Grassland(i,j);
 		}
 	}
 
-	Coop *c[4][10];
-	for (int i = 1; i <= 3; i++){
-		for (int j = 1; j <= 10; j++){
+	Coop *c[10][4];
+	for (int i = 1; i <= 9; i++){
+		for (int j = 1; j <= 3; j++){
 			c[i][j] = new Coop(i,j);
 		}
 	}
@@ -132,21 +131,20 @@ int main(){
 			cout << w->getKategori() << "  ";		
 		}
 		for (int j = 1; j <= 9; j++){
-			cout << c[i][j]->getKategori() << "  ";
+			cout << c[j][i]->getKategori() << "  ";
 		}
 		cout << endl;
 	}
 
-	for (int i = 1; i <= 5; i++){
+	for (int i = 1; i <= 7; i++){
 		for (int j = 1; j <= 5; j++){
-			cout << b[i][j]->getKategori() << "  ";
+			cout << b[j][i]->getKategori() << "  ";
 		}
 		for (int j = 1; j <= 5; j++){
-			cout << g[i][j]->getKategori() << " ";
+			cout << g[j][i]->getKategori() << " ";
 		}
 		cout << endl;
 	}
-	*/
 
 	return 0;
 }

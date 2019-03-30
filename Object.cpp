@@ -20,3 +20,19 @@ void Object::setXY(int _x, int _y){
     x = _x;
     y = _y;
 }
+
+int Object::landType(){
+    int _x, _y;
+    _x = getX();
+    _y = getY();
+    //asumsi Object selalu di land
+    if (_x >= 2 and _y <= 3){
+        return 1;
+    }
+    else if (_x >= 1 and _x <= 5 and _y >= 4){
+        return 2;
+    }
+    else {
+        return 3;
+    }
+}

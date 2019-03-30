@@ -12,6 +12,7 @@ class Object{
         int getY();
         //Setter
         void setXY(int, int);
+        int landType();//1 = Coop, 2 = Barn, 3 = Grass
 };
 
 #endif

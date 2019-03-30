@@ -5,12 +5,15 @@ Player::Player(){
     setXY(1,1);
     WadahAir = 0;
     size_tas = 10;
+    LinkedList <Produk> *Tas;
+    Tas = new LinkedList <Produk>();
 }
 
 //dtor
 Player::~Player(){
     WadahAir = 0;
-    size_tas = 0; 
+    size_tas = 0;
+    delete[] &Tas; 
 }
         
 //getter
@@ -48,7 +51,7 @@ void Player::removeProduk(int indeks){
 
 // Methods
 void Player::Talk(){
-
+        
 }
 void Player::Interact(){
      
@@ -57,7 +60,7 @@ void Player::Kill(){
 
 }
 void Player::Grow(){
-
+    
 }
 void Player::Mix(){
 
