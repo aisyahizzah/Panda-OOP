@@ -1,7 +1,6 @@
 #include "MilkProducing.h"
 
 MilkProducing::MilkProducing(){
-    setXY(0,0);
     setHungry(5);
     produceMilk = false;
 }

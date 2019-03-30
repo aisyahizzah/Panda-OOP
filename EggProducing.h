@@ -9,8 +9,8 @@ class EggProducing : public FarmAnimal{
         bool produceEgg;
     public :
         EggProducing();
-        void moveRandom();
-        void makeVoice();
+        virtual void moveRandom()=0;
+        virtual void makeVoice()=0;
         void eat(Coop);
         void gotInteracted();
         bool getProduceEgg();

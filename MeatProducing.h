@@ -7,8 +7,8 @@
 class MeatProducing : public FarmAnimal{
     public :
         MeatProducing();
-        void moveRandom();
-        void makeVoice();
+        virtual void moveRandom()=0;
+        virtual void makeVoice()=0;
         void eat(Barn);
         void gotKilled();
 };

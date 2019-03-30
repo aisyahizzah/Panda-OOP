@@ -7,6 +7,19 @@ Cow::Cow(){
 Cow::~Cow(){
     
 }
+
+void Cow::moveRandom(){
+    
+}
+
 void Cow::makeVoice(){
-    cout << "Moo" << endl;
+    cout << "Cow" << endl;
+}
+
+void Cow::eat(){
+
+}
+
+void Cow::gotInteracted(){
+
 }

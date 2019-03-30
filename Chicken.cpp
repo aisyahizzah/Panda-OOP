@@ -7,6 +7,19 @@ Chicken::Chicken(){
 Chicken::~Chicken(){
     
 }
+
+void Chicken::moveRandom(){
+
+}
+        
 void Chicken::makeVoice(){
-    cout << "Kukuruyuk" << endl;
+    cout << "Chicken" << endl;
+}
+
+void Chicken::eat(){
+
+}
+
+void Chicken::gotInteracted(){
+
 }

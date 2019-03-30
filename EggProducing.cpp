@@ -1,7 +1,6 @@
 #include "EggProducing.h"
 
 EggProducing::EggProducing(){
-    setXY(0,0);
     setHungry(5);
     produceEgg = false;
 }
