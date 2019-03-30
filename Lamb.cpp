@@ -4,6 +4,11 @@ using namespace std;
 Lamb::Lamb(){
     
 }
+
+Lamb::Lamb(int x,int y){
+    setXY(x,y);
+}
+
 Lamb::~Lamb(){
     
 }

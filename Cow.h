@@ -8,6 +8,7 @@
 class Cow : public MilkProducing, public MeatProducing, public Object{
     public :
         Cow();
+        Cow(int ,int );
         ~Cow();
         void moveRandom();
         void makeVoice();

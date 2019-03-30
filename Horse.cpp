@@ -4,6 +4,11 @@ using namespace std;
 Horse::Horse(){
     
 }
+
+Horse::Horse(int x,int y){
+    setXY(x,y);
+}
+
 Horse::~Horse(){
     
 }

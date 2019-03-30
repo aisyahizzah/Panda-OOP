@@ -8,6 +8,7 @@
 class Lamb : public MilkProducing, public MeatProducing, public Object{
     public :
         Lamb();
+        Lamb(int ,int );
         ~Lamb();
         void moveRandom();
         void makeVoice();

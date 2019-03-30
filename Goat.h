@@ -8,6 +8,7 @@
 class Goat : public MilkProducing, public MeatProducing, public Object{
     public :
         Goat();
+        Goat(int ,int );
         ~Goat();
         void moveRandom();
         void makeVoice();

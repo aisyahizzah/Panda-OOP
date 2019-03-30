@@ -4,6 +4,11 @@ using namespace std;
 Cow::Cow(){
     
 }
+
+Cow::Cow(int x,int y){
+    setXY(x,y);
+}
+
 Cow::~Cow(){
     
 }

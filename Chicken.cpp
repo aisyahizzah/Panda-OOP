@@ -4,9 +4,11 @@ using namespace std;
 Chicken::Chicken(){
     
 }
+
 Chicken::Chicken(int x,int y){
     setXY(x,y);
 }
+
 Chicken::~Chicken(){
     
 }

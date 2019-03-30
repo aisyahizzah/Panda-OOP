@@ -109,21 +109,21 @@ int main(){
 	Barn *b[6][8];
 	for (int i = 1; i <= 5; i++){
 		for (int j = 1; j <= 7; j++){
-			b[i][j] = new Barn(i,j);
+			b[i][j] = new Barn(i,j+3);
 		}
 	}
 
 	Grassland *g[6][8];
 	for (int i = 1; i <= 5; i++){
 		for (int j = 1; j <= 7; j++){
-			g[i][j] = new Grassland(i,j);
+			g[i][j] = new Grassland(i+5,j+3);
 		}
 	}
 
 	Coop *c[10][4];
 	for (int i = 1; i <= 9; i++){
 		for (int j = 1; j <= 3; j++){
-			c[i][j] = new Coop(i,j);
+			c[i][j] = new Coop(i+1,j);
 		}
 	}
 
@@ -152,6 +152,11 @@ int main(){
 		}
 		cout << endl;
 	}
+
+	/*
+	p->Grow(*b,*c,*g);
+	cout << c[p->getX()+1][p->getY()]->IsOccupied() << endl;
+	*/
 
 	return 0;
 }

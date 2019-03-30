@@ -39,6 +39,7 @@ class Player: public Object{
 		void Interact();
 		void Kill();
 		void Grow();
+		/*void Grow(Barn **b, Coop **c, Grassland **g);*/
 		void Mix();
 
 		//Move

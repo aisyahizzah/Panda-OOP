@@ -1,4 +1,7 @@
 #include "Player.h"
+#include "Barn.h"
+#include "Coop.h"
+#include "Grassland.h"
 
 // ctor
 Player::Player(){
@@ -51,17 +54,43 @@ void Player::removeProduk(int indeks){
 
 // Methods
 void Player::Talk(){
-        
+    int x, y;
+    x = getX();
+    y = getY();
 }
 void Player::Interact(){
-     
+     int x, y;
+    x = getX();
+    y = getY();
 }
 void Player::Kill(){
-
+    int x, y;
+    x = getX();
+    y = getY();
 }
 void Player::Grow(){
-    
+    int x, y;
+    x = getX();
+    y = getY();
 }
+
+/*
+void Player::Grow(Barn **b, Coop **c, Grassland **g){
+    int x, y;
+    x = getX();
+    y = getY();
+    if (landType() == 1){
+        b[x-1][y].SetOccupied(true);
+    }
+    else if (landType() == 1){
+        c[x-1][y].SetOccupied(true);
+    }
+    else if (landType() == 1){
+        g[x-1][y].SetOccupied(true);
+    }
+}
+*/
+
 void Player::Mix(){
 
 }

@@ -4,6 +4,11 @@ using namespace std;
 Duck::Duck(){
     
 }
+
+Duck::Duck(int x,int y){
+    setXY(x,y);
+}
+
 Duck::~Duck(){
     
 }

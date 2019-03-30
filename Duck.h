@@ -8,6 +8,7 @@
 class Duck : public EggProducing, public MeatProducing, public Object{
     public :
         Duck();
+        Duck(int ,int );
         ~Duck();
         void moveRandom();
         void makeVoice();
