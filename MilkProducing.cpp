@@ -5,12 +5,9 @@ MilkProducing::MilkProducing(){
     produceMilk = false;
 }
 
-void MilkProducing::moveRandom(){
+void MilkProducing::moveRandom(){}
+void MilkProducing::makeVoice(){}
 
-}
-void MilkProducing::makeVoice(){
-
-}
 void MilkProducing::eat(Grassland g){
     if (g.IsRumputExist()){
         g.SetRumput(false);

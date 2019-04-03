@@ -9,8 +9,8 @@ class MilkProducing : public FarmAnimal{
         bool produceMilk;
     public :
         MilkProducing();
-        virtual void moveRandom()=0;
-        virtual void makeVoice()=0;
+        virtual void moveRandom();
+        virtual void makeVoice();
         void eat(Grassland);
         void gotInteracted();
         bool getProduceMilk();
