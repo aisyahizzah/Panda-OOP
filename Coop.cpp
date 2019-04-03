@@ -9,3 +9,5 @@ Coop::Coop(int x, int y){
     setX(x);
     setY(y);
 }
+    
+Coop::~Coop(){}

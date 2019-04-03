@@ -6,6 +6,7 @@ class Barn : public Land{
 	public:
 		Barn();
 		Barn(int x, int y);
+		~Barn();
 };
 
 #endif

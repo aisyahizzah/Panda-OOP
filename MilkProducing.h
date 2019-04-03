@@ -3,6 +3,7 @@
 
 #include "FarmAnimal.h"
 #include "Grassland.h"
+#include "Produk.h"
 
 class MilkProducing : public FarmAnimal{
     private :
@@ -12,9 +13,9 @@ class MilkProducing : public FarmAnimal{
         virtual void moveRandom();
         virtual void makeVoice();
         void eat(Grassland);
-        void gotInteracted();
+        Produk getProduct();
         bool getProduceMilk();
-        void setProduceMilk(bool );
+        void setProduceMilk(bool);
 };
 
 #endif

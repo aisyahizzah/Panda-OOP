@@ -1,5 +1,5 @@
 #include "Produk.h"
-static int n_produk = 0;
+int n_produk = 0;
 
 Produk::Produk(int _value){
 	harga = _value;

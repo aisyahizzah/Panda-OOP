@@ -1,6 +1,6 @@
 #include "Susu.h"
 
-Susu::Susu() : FarmProduk(){
+Susu::Susu(int value) : FarmProduk(value){
 	std::cout << "susu created" <<std::endl;	
 }
 Susu::~Susu(){

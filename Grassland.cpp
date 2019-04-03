@@ -9,3 +9,5 @@ Grassland::Grassland(int x, int y){
     setX(x);
     setY(y);
 }
+
+Grassland::~Grassland(){}

@@ -8,6 +8,7 @@ class FarmProduk : Produk{
         static int n_farmproduk;
     public:
         FarmProduk(int);
+        ~FarmProduk();
         static int Get_N_FarmProduk();
 };
 

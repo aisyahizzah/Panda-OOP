@@ -9,3 +9,5 @@ Barn::Barn(int x, int y){
     setX(x);
     setY(y);
 }
+    
+Barn::~Barn(){}

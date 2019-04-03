@@ -6,6 +6,7 @@
 class Grassland : public Land{
     public:
         Grassland();
-        Grassland(int ,int );
+        Grassland(int ,int);
+        ~Grassland();
 };
 #endif

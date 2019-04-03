@@ -6,7 +6,7 @@
 
 class Susu : public FarmProduk{
     public:
-        Susu();
+        Susu(int);
         ~Susu();
 };
 

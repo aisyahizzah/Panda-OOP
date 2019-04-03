@@ -3,6 +3,8 @@
 #include "Coop.h"
 #include "Grassland.h"
 
+#include "Produk.h"
+
 // ctor
 Player::Player(){
     setXY(1,1);
@@ -80,7 +82,7 @@ void Player::Talk(Lamb L){
 
 void Player::Interact(MilkProducing hewan){
     hewan.setProduceMilk(true);
-    addProduk(getProduct());
+    addProduk(Produk(1000));
 }
 void Player::Interact(MeatProducing hewan){
 
@@ -89,7 +91,7 @@ void Player::Interact(MeatProducing hewan){
 void Player::Interact(EggProducing hewan){
     
 }
-void Player::Kill(){
+void Player::Kill(MeatProducing hewan){
     int x, y;
     x = getX();
     y = getY();

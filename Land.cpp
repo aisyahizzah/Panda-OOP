@@ -1,9 +1,10 @@
 #include "Land.h"
 
-Land::Land(){
+Land::Land() {
     occupied = false;
     rumput = false;
 }
+Land::~Land(){}
 
 //Jika ada hewan
 bool Land::IsOccupied(){
