@@ -17,7 +17,8 @@ void MilkProducing::eat(Grassland g){
 }
 
 Produk MilkProducing::getProduct(){
-    return Produk(1000);
+    Produk *pro;
+    return *pro/*Produk(1000)*/;
 }
 
 bool MilkProducing::getProduceMilk(){

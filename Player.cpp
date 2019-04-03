@@ -81,9 +81,12 @@ void Player::Talk(Lamb L){
 }
 
 void Player::Interact(MilkProducing hewan){
+    /*
     hewan.setProduceMilk(true);
     addProduk(Produk(1000));
+    */
 }
+
 void Player::Interact(MeatProducing hewan){
 
 }
