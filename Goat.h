@@ -6,8 +6,9 @@
 #include "MeatProducing.h"
 
 class Goat : public MilkProducing, public MeatProducing, public Object{
-    public :
+    private:
         Goat();
+    public:
         Goat(int ,int );
         ~Goat();
         void moveRandom();

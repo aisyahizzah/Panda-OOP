@@ -51,7 +51,7 @@ class LinkedList {
 		}
 		
 		void add(T element){
-			ElmtList<T> *temp = new ElmtList<T>();
+			ElmtList<T> *temp = ElmtList<T>();
 			temp->info = element;
 			temp->next = NULL;
 			

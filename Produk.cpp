@@ -1,5 +1,6 @@
 #include "Produk.h"
-int n_produk = 0;
+
+int Produk::n_produk = 0;
 
 Produk::Produk(int _value){
 	harga = _value;
@@ -14,6 +15,6 @@ int Produk::getHarga(){
 	return harga;
 }
 
-int Get_N_Produk(){
+int Produk::Get_N_Produk(){
 	return n_produk;
 }

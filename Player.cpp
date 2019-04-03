@@ -4,14 +4,19 @@
 #include "Grassland.h"
 
 #include "Produk.h"
+#include <iostream>
 
+#include "Goat.h"
+#include "Chicken.h"
+#include "Duck.h"
+#include "Lamb.h"
+#include "Cow.h"
 // ctor
 Player::Player(){
     setXY(1,1);
     WadahAir = 0;
     size_tas = 10;
-    LinkedList <Produk> *Tas;
-    Tas = new LinkedList <Produk>();
+    LinkedList<Produk> *Tas = LinkedList<Produk>();
 }
 
 //dtor
@@ -22,33 +27,19 @@ Player::~Player(){
 }
         
 //getter
-int Player::getWadahAir(){
-    return WadahAir;
-}
-int Player::getNeffTas(){
-    return size_tas;
-}
+int Player::getWadahAir(){return WadahAir;}
+int Player::getNeffTas(){return size_tas;}
 
 //setter
-void Player::setWadahAir(int _WadahAir){
-    WadahAir = _WadahAir;
-}
-
-bool Player::isTasFull(){
-    return 0;
-}
-bool Player::isTasEmpty(){
-    return 0;
-}
-bool Player::isWadahAirFull(){
-    return (WadahAir == 5);
-}
-bool Player::isWadahAirEmpty(){
-    return (WadahAir == 0);
-}
+void Player::setWadahAir(int _WadahAir){WadahAir = _WadahAir;}
+bool Player::isTasFull(){return size_tas == 15;}
+bool Player::isTasEmpty(){return size_tas == 0;}
+bool Player::isWadahAirFull(){return (WadahAir == 5);}
+bool Player::isWadahAirEmpty(){return (WadahAir == 0);}
 
 void Player::addProduk(Produk P){
-
+    if (isTasFull() != true)
+        Tas->add(P);
 }
 void Player::removeProduk(int indeks){
 
@@ -60,7 +51,7 @@ void Player::removeProduk(int indeks){
     tidak diberikan pilihan,
     pengecekan objek dimulai dari atas, kanan, bawah, kiri PLAYER
 */
-
+/*
 void Player::Talk(Chicken C){
     C.makeVoice();
 }
@@ -71,16 +62,17 @@ void Player::Talk(Cow C){
 void Player::Talk(Duck D){
     D.makeVoice();
 }
-
+*/
 void Player::Talk(Goat G){
     G.makeVoice();
 }
-
+/*
 void Player::Talk(Lamb L){
     L.makeVoice();
 }
 
 void Player::Interact(MilkProducing hewan){
+    std::cout<<"kambing dielus"<<std::endl;
     hewan.setProduceMilk(true);
     addProduk(Produk(1000));
 }
@@ -96,6 +88,7 @@ void Player::Kill(MeatProducing hewan){
     x = getX();
     y = getY();
 }
+*/
 void Player::Grow(){
     int x, y;
     x = getX();
@@ -125,22 +118,18 @@ void Player::Mix(){
 
 //Move
 void Player::MoveUp(){
-    if ( (getY()-1) >= 1 ) {
+    if ( (getY()-1) >= 1 )
         setXY(getX(),getY()-1);
-    }
 }
 void Player::MoveDown(){
-    if ( (getY()+1) <= 10 ) {
+    if ( (getY()+1) <= 10 )
         setXY(getX(),getY()+1);
-    }
 }
 void Player::MoveLeft(){
-    if ( (getX()-1) >= 1 ) {
+    if ( (getX()-1) >= 1 )
         setXY(getX()-1,getY());
-    }
 }
 void Player::MoveRight(){
-    if ( (getX()+1) <= 10 ) {
+    if ((getX()+1) <= 10 )
         setXY(getX()+1,getY());
-    }
 }
