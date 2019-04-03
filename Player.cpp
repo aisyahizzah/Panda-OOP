@@ -59,15 +59,35 @@ void Player::removeProduk(int indeks){
     pengecekan objek dimulai dari atas, kanan, bawah, kiri PLAYER
 */
 
-void Player::Talk(){
-    int x, y;
-    x = getX();
-    y = getY();
+void Player::Talk(Chicken C){
+    C.makeVoice();
 }
+void Player::Talk(Cow C){
+    C.makeVoice();
+}
+
+void Player::Talk(Duck D){
+    D.makeVoice();
+}
+
+void Player::Talk(Goat G){
+    G.makeVoice();
+}
+
+void Player::Talk(Lamb L){
+    L.makeVoice();
+}
+
 void Player::Interact(MilkProducing hewan){
-     int x, y;
-    x = getX();
-    y = getY();
+    hewan.setProduceMilk(true);
+    addProduk(getProduct());
+}
+void Player::Interact(MeatProducing hewan){
+
+}
+
+void Player::Interact(EggProducing hewan){
+    
 }
 void Player::Kill(){
     int x, y;

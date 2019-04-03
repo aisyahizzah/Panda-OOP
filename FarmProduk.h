@@ -7,7 +7,7 @@ class FarmProduk : Produk{
     private:
         static int n_farmproduk;
     public:
-        FarmProduk();
+        FarmProduk(int);
         static int Get_N_FarmProduk();
 };
 

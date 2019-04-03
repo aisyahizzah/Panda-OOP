@@ -7,7 +7,7 @@ class SideProduk : Produk{
     private:
         static int n_sideproduk;
     public:
-        SideProduk();
+        SideProduk(int);
         ~SideProduk();
         static int Get_N_SideProduk();
 

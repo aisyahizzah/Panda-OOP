@@ -1,4 +1,5 @@
 #include "MilkProducing.h"
+#include "Susu.h"
 
 MilkProducing::MilkProducing(){
     setHungry(5);
@@ -19,8 +20,9 @@ void MilkProducing::gotInteracted(){
     setProduceMilk(false);
 }
 
-bool MilkProducing::getProduceMilk(){
-    return produceMilk;
+Product MilkProducing::getProduct(){
+    susu;
+    return susu;
 }
 void MilkProducing::setProduceMilk(bool b){
     produceMilk = b;

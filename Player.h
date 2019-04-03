@@ -7,6 +7,12 @@
 #include "MeatProducing.h"
 #include "EggProducing.h"
 
+#include "Chicken.h"
+#include "Cow.h"
+#include "Duck.h"
+#include "Goat.h"
+#include "Lamb.h"
+
 using namespace std;
 
 class Player: public Object{
