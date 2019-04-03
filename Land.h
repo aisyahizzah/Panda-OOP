@@ -15,7 +15,6 @@ class Land : public Cell{
     	//Jika ada hewan
     	bool IsOccupied();
     	bool IsRumputExist();
-
     	void SetOccupied(bool);
     	void SetRumput(bool);
 };

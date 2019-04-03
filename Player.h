@@ -55,6 +55,9 @@ class Player: public Object{
 		void Interact(EggProducing hewan);
 		void Kill(MeatProducing hewan);
 		void Grow();
+		void Grow(Barn *b);
+		void Grow(Coop *c);
+		void Grow(Grassland *g);
 		/*void Grow(Barn **b, Coop **c, Grassland **g);*/
 		void Mix();
 

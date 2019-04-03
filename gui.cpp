@@ -1,4 +1,4 @@
-//g++ coba-gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp -o main 
+//g++ gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp -o main 
 
 #include "Cell.h"
 #include "Mixer.h"
@@ -20,10 +20,14 @@
 #include "Goat.h"
 #include "Horse.h"
 #include "Lamb.h"
+#include <cstring>
 #include <iostream>
 
 using namespace std;
+
 int main(){
+	
+	void GUI(int N,Cell** peta, Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t, Mixer* m, Well* w, int money);
 	
 	int N = 10;
 	Cell **peta;
@@ -32,50 +36,14 @@ int main(){
 		peta[i] = new Cell[N+1];
 	}
 	
-	
 	Player *p;
 	p = new Player();
+	string command;
+	string position;
 	int money;
+	int no;
 
-
-	
-	/*Chicken *c1;
-	c1 = new Chicken();
-	c1->makeVoice();
-	cout << c1->getProduceEgg() << endl;
-	cout << c1->getX() << "," << c1->getY() << endl;
-
-	Chicken *c2;
-	c2 = new Chicken(5,5);
-	c2->makeVoice();
-	cout << c2->getProduceEgg() << endl;
-	cout << c2->getX() << "," << c2->getY() << endl;
-
-	Cow *cw1;
-	cw1 = new Cow();
-	cw1->makeVoice();
-	cout << cw1->getProduceMilk() << endl;
-
-	Duck *d1;
-	d1 = new Duck();
-	d1->makeVoice();
-	cout << d1->getProduceEgg() << endl;
-	
-	Goat *g1;
-	g1 = new Goat();
-	g1->makeVoice();
-	cout << g1->getProduceMilk() << endl;
-	
-	Horse *h1;
-	h1 = new Horse();
-	h1->makeVoice();
-	cout << h1->getProduceMilk() << endl;
-
-	Lamb *l1;
-	l1 = new Lamb();
-	l1->makeVoice();
-	cout << l1->getProduceMilk() << endl;*/
-	
+	money = 5;
 
 	Truck *t;
 	Mixer *m;
@@ -105,67 +73,110 @@ int main(){
 			c[i][j] = new Coop(i+1,j);
 		}
 	}
-
-	int finish = 0;
-	while( finish != 1){
-	int start = 0;
-	int move;	 
-		while(start==0){
-		cout << "move : " ;
-		cin >> move;
-		if (move == 1) {
-			p->MoveUp();
-		}
-		else if (move == 2) {
-			p->MoveDown();
-		}
-		else if (move == 3) {
-			p->MoveLeft();
-		}
-		else if (move == 4) {
-			p->MoveRight();
-		}
-		else{
-			start = 1;
-		}
-		cout << p->getX() << "," << p->getY() << endl;
-	}
-		for (int i = 1; i <= 3; i++){
-			if (i == 1){
-				cout << t->getKategori() << " ";		
-			}
-			else if (i == 2){
-				cout << m->getKategori() << " ";		
-			}
-			else{
-				cout << w->getKategori() << "  ";		
-			}
-			for (int j = 1; j <= 9; j++){
-				cout << c[j][i]->getKategori() << "  ";
-			}
-			cout << endl;
-		}
-
-		for (int i = 1; i <= 7; i++){
-			for (int j = 1; j <= 5; j++){
-				cout << b[j][i]->getKategori() << "  ";
-			}
-			for (int j = 1; j <= 5; j++){
-				cout << g[j][i]->getKategori() << " ";
-			}
-			cout << endl;
-		}
-
-		cout << "finish = " << endl;
-		cin >> finish;
-	}
-
     
 	/*
 	p->Grow(*b,*c,*g);
 	cout << c[p->getX()+1][p->getY()]->IsOccupied() << endl;
 	*/
 
+		GUI(N,peta,p,b,g,c,t,m,w,money);
+		do{
+			cout << " Command : ";
+			cin >> command;
+			if (command == "MOVE"){
+				cin >> position;
+				if (position == "UP"){
+					p->MoveUp();
+					cout << p->getY() << "," << p->getX() << endl;
+					GUI(N,peta,p,b,g,c,t,m,w,money);
+				} else if (position == "DOWN"){
+					cout << peta[10][1].getKategori();
+					p->MoveDown();
+					cout << p->getY() << "," << p->getX() << endl;
+					GUI(N,peta,p,b,g,c,t,m,w,money);
+				} else if (position == "RIGHT"){
+					p->MoveRight();
+					cout << p->getY() << "," << p->getX() << endl;
+					GUI(N,peta,p,b,g,c,t,m,w,money);
+				} else if (position == "LEFT"){
+					p->MoveLeft();
+					cout << p->getY() << "," << p->getX() << endl;
+					GUI(N,peta,p,b,g,c,t,m,w,money);
+				}
+			} else if (command == "TALK"){
+				cout << " " << command <<endl;
+				GUI(N,peta,p,b,g,c,t,m,w,money);
+			} else if (command == "INTERACT"){
+				cout << " " << command <<endl;
+				GUI(N,peta,p,b,g,c,t,m,w,money);
+			} else if (command == "KILL"){
+				cout << " " << command <<endl;
+				GUI(N,peta,p,b,g,c,t,m,w,money);
+			} else if (command == "GROW"){
+				cin >> position;
+				if (position == "UP"){
+					if ((p->getY()-1)>0){
+						if ((p->getY()<=3) && (p->getX()>1)){
+							p -> Grow(c[p->getX()-1][p->getY()-1]);
+						} else if (p->getY()>3){
+							if(p->getX()<=5){
+							p -> Grow(b[p->getX()][p->getY()-4]);
+							} else{
+							p -> Grow(g[p->getX()-5][p->getY()-4]);
+							}
+						}
+						GUI(N,peta,p,b,g,c,t,m,w,money);	
+					}
+				} else if (position == "DOWN"){
+					if ((p->getY()+1)<=10){
+						if ((p->getY()<=3) && (p->getX()>1)){
+							p -> Grow(c[p->getX()-1][p->getY()+1]);
+						} else if (p->getY()>3){
+							if(p->getX()<=5){
+							p -> Grow(b[p->getX()][p->getY()-3]);
+							} else{
+							p -> Grow(g[p->getX()-5][p->getY()-3]);
+							}
+						}
+						GUI(N,peta,p,b,g,c,t,m,w,money);	
+					}
+				} else if (position == "RIGHT"){
+					if ((p->getX()+1)<=10){
+						if ((p->getY()<=3) && (p->getX()>1)){
+							p -> Grow(c[p->getX()][p->getY()]);
+						} else if (p->getY()>3){
+							if(p->getX()<=5){
+							p -> Grow(b[p->getX()+1][p->getY()-3]);
+							} else{
+							p -> Grow(g[p->getX()-4][p->getY()-3]);
+							}
+						}
+						GUI(N,peta,p,b,g,c,t,m,w,money);	
+					}
+				} else if (position == "LEFT"){
+					if ((p->getX()-1)>0){
+						if ((p->getY()<=3) && (p->getX()>1)){
+							p -> Grow(c[p->getX()-2][p->getY()]);
+						} else if (p->getY()>3){
+							if(p->getX()<=5){
+							p -> Grow(b[p->getX()-1][p->getY()-3]);
+							} else{
+							p -> Grow(g[p->getX()-6][p->getY()-3]);
+							}
+						}
+						GUI(N,peta,p,b,g,c,t,m,w,money);	
+					}
+				}
+			} else  if (command!="EXIT"){
+				cout << " INVALID COMMAND" << endl;
+				GUI(N,peta,p,b,g,c,t,m,w,money);
+			}
+		} while (command != "EXIT");
+
+	return 0;
+}
+
+void GUI(int N, Cell** peta, Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t, Mixer* m, Well* w, int money){
     cout << "-----------------------------------------------------------------------" << endl;
     for (int i = 1; i <= 3; i++){
 			if (i == 1){
@@ -178,11 +189,11 @@ int main(){
 				cout << "| W ";		
 			}
 			for (int j = 1; j <= 9; j++){
-                if (c[j][i]->IsRumputExist()&&(i != p->getX() || j+1 != p->getY())){
+                if (c[j][i]->IsRumputExist()&&(i != p->getY() || j+1 != p->getX())){
 					cout << "| * ";
-                } else if (c[j][i]->IsRumputExist()==false&& (i != p-> getX() || j+1 != p->getY())){
+                } else if (!c[j][i]->IsRumputExist()&& (i != p-> getY() || j+1 != p->getX())){
                     cout << "| o ";
-                }else if (p->getX() == i && p->getY() ==j+1){
+                }else if (p->getY() == i && p->getX() == j+1){
 					cout << "| P ";
 				}
 			}
@@ -197,20 +208,20 @@ int main(){
 
 		for (int i = 1; i <= 7; i++){
 			for (int j = 1; j <= 5; j++){
-                if (b[j][i]->IsRumputExist()&&(i+3 != p->getX() || j != p->getY())){
+                if (b[j][i]->IsRumputExist()&&(i+3 != p->getY() || j != p->getX())){
                     cout << "| @ ";
-                } else if (b[j][i]->IsRumputExist()==false&&(i+3 != p->getX() || j != p->getY())){
+                } else if (b[j][i]->IsRumputExist()==false&&(i+3 != p->getY() || j != p->getX())){
                     cout << "| x ";
-                }else if (p-> getX() == i+3 && p->getY() == j){
+                }else if (p-> getY() == i+3 && p->getX() == j){
 					cout << "| P ";
 				}
 			}
 			for (int j = 1; j <= 5; j++){
-				if (g[j][i]->IsRumputExist()&&(i+3 != p->getX() || j+5 != p->getY())){
+				if (g[j][i]->IsRumputExist()&&(i+3 != p->getY() || j+5 != p->getX())){
                     cout << "| # ";
-                } else if (g[j][i]->IsRumputExist()==false&&(i+3 != p->getX() || j+5 != p->getY())){
+                } else if (g[j][i]->IsRumputExist()==false&&(i+3 != p->getY() || j+5 != p->getX())){
                     cout << "| - ";
-                }else if (p-> getX() == i+3 && p->getY() == j+5){
+                }else if (p-> getY() == i+3 && p->getX() == j+5){
 					cout << "| P ";
 				}
 			}
@@ -223,21 +234,22 @@ int main(){
             } else if (i==6) {
                 cout << "| Money : ";
 				cout << money;
-				cout << "                    |"<<endl;
+				for(int i = 1; i <= 20 - (sizeof(money)/4); i++){
+					cout << " ";
+				}
+				cout << "|"<<endl;
                 cout << "-----------------------------------------------------------------------" <<endl;
             } else if (i==7) {
                 cout << "| Water : ";
 				cout << p->getWadahAir();
-				cout << "                    |"<<endl;
+				for(int i = 1; i <= 20 - (sizeof(p->getWadahAir())/4); i++){
+					cout << " ";
+				}
+				cout << "|"<<endl;
                 cout << "-----------------------------------------------------------------------" <<endl;
             } else{
                 cout << "|                             |"<<endl;
                 cout << "-----------------------------------------                             -"<<endl;
             }
         }
-        cout << "| Command :                                                           |"<<endl;
-        cout << "-----------------------------------------------------------------------"<<endl;
-
-	return 0;
 }
-

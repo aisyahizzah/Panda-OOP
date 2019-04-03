@@ -2,12 +2,11 @@
 #include "Barn.h"
 #include "Coop.h"
 #include "Grassland.h"
-
 #include "Produk.h"
 
 // ctor
 Player::Player(){
-    setXY(1,1);
+    setXY(10,1);
     WadahAir = 0;
     size_tas = 10;
     LinkedList <Produk> *Tas;
@@ -103,6 +102,15 @@ void Player::Grow(){
     int x, y;
     x = getX();
     y = getY();
+}
+void Player::Grow(Barn *b){
+    b->SetRumput(true);
+}
+void Player::Grow(Coop *c){
+    c->SetRumput(true);
+}
+void Player::Grow(Grassland *g){
+    g->SetRumput(true);
 }
 
 /*
