@@ -27,12 +27,12 @@ int Object::landType(){
     _y = getY();
     //asumsi Object selalu di land
     if (_x >= 2 and _y <= 3){
-        return 1;
+        return 1; //coop
     }
     else if (_x >= 1 and _x <= 5 and _y >= 4){
-        return 2;
+        return 2; //barn
     }
     else {
-        return 3;
+        return 3; //grass
     }
 }
