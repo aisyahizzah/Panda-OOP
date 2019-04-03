@@ -113,60 +113,16 @@ int main(){
 				cout << " " << command <<endl;
 				GUI(N,peta,p,b,g,c,t,m,w,money);
 			} else if (command == "GROW"){
-				cin >> position;
-				if (position == "UP"){
-					if ((p->getY()-1)>0){
-						if ((p->getY()<=3) && (p->getX()>1)){
-							p -> Grow(c[p->getX()-1][p->getY()-1]);
-						} else if (p->getY()>3){
-							if(p->getX()<=5){
-							p -> Grow(b[p->getX()][p->getY()-4]);
-							} else{
-							p -> Grow(g[p->getX()-5][p->getY()-4]);
-							}
-						}
-						GUI(N,peta,p,b,g,c,t,m,w,money);	
-					}
-				} else if (position == "DOWN"){
-					if ((p->getY()+1)<=10){
-						if ((p->getY()<=3) && (p->getX()>1)){
-							p -> Grow(c[p->getX()-1][p->getY()+1]);
-						} else if (p->getY()>3){
-							if(p->getX()<=5){
-							p -> Grow(b[p->getX()][p->getY()-3]);
-							} else{
-							p -> Grow(g[p->getX()-5][p->getY()-3]);
-							}
-						}
-						GUI(N,peta,p,b,g,c,t,m,w,money);	
-					}
-				} else if (position == "RIGHT"){
-					if ((p->getX()+1)<=10){
-						if ((p->getY()<=3) && (p->getX()>1)){
-							p -> Grow(c[p->getX()][p->getY()]);
-						} else if (p->getY()>3){
-							if(p->getX()<=5){
-							p -> Grow(b[p->getX()+1][p->getY()-3]);
-							} else{
-							p -> Grow(g[p->getX()-4][p->getY()-3]);
-							}
-						}
-						GUI(N,peta,p,b,g,c,t,m,w,money);	
-					}
-				} else if (position == "LEFT"){
-					if ((p->getX()-1)>0){
-						if ((p->getY()<=3) && (p->getX()>1)){
-							p -> Grow(c[p->getX()-2][p->getY()]);
-						} else if (p->getY()>3){
-							if(p->getX()<=5){
-							p -> Grow(b[p->getX()-1][p->getY()-3]);
-							} else{
-							p -> Grow(g[p->getX()-6][p->getY()-3]);
-							}
-						}
-						GUI(N,peta,p,b,g,c,t,m,w,money);	
+				if ((p->getY()<=3) && (p->getX()>1)){
+					p -> Grow(c[p->getX()][p->getY()]);
+				} else if (p->getY()>3){
+					if(p->getX()<=5){
+					p -> Grow(b[p->getX()+1][p->getY()-3]);
+					} else{
+						p -> Grow(g[p->getX()-4][p->getY()-3]);
 					}
 				}
+				GUI(N,peta,p,b,g,c,t,m,w,money);	
 			} else  if (command!="EXIT"){
 				cout << " INVALID COMMAND" << endl;
 				GUI(N,peta,p,b,g,c,t,m,w,money);
