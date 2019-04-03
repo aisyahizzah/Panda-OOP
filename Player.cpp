@@ -72,10 +72,16 @@ void Player::Talk(Lamb L){
 }
 
 void Player::Interact(MilkProducing hewan){
+<<<<<<< HEAD
     std::cout<<"kambing dielus"<<std::endl;
+=======
+    /*
+>>>>>>> de03172bafa71bca08cf15c9420eb48069ffa069
     hewan.setProduceMilk(true);
     addProduk(Produk(1000));
+    */
 }
+
 void Player::Interact(MeatProducing hewan){
 
 }
