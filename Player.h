@@ -3,6 +3,9 @@
 #include "Produk.h"
 #include "Object.h"
 #include "LinkedList.h"
+#include "MilkProducing.h"
+#include "MeatProducing.h"
+#include "EggProducing.h"
 
 using namespace std;
 
@@ -35,9 +38,16 @@ class Player: public Object{
 		void removeProduk(int indeks);
 		
 		// Methods
-		void Talk();
-		void Interact();
-		void Kill();
+		void Talk(Chicken C);
+		void Talk(Cow C);
+		void Talk(Duck D);
+		void Talk(Goat G);
+		void Talk(Lamb B);
+
+		void Interact(MilkProducing hewan);
+		void Interact(MeatProducing hewan);
+		void Interact(EggProducing hewan);
+		void Kill(MeatProducing hewan);
 		void Grow();
 		/*void Grow(Barn **b, Coop **c, Grassland **g);*/
 		void Mix();

@@ -5,12 +5,9 @@ EggProducing::EggProducing(){
     produceEgg = false;
 }
 
-void EggProducing::moveRandom(){
+void EggProducing::moveRandom(){}
+void EggProducing::makeVoice(){}
 
-}
-void EggProducing::makeVoice(){
-
-}
 void EggProducing::eat(Coop c){
     if (c.IsRumputExist()){
         c.SetRumput(false);

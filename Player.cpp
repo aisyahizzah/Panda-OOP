@@ -52,13 +52,19 @@ void Player::removeProduk(int indeks){
 
 }
 
-// Methods
+/*
+    Interaksi & Manipulasi
+    Sekali interaksi hanya bisa dengan satu objek
+    tidak diberikan pilihan,
+    pengecekan objek dimulai dari atas, kanan, bawah, kiri PLAYER
+*/
+
 void Player::Talk(){
     int x, y;
     x = getX();
     y = getY();
 }
-void Player::Interact(){
+void Player::Interact(MilkProducing hewan){
      int x, y;
     x = getX();
     y = getY();
