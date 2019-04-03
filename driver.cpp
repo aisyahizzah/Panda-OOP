@@ -32,35 +32,11 @@ int main(){
 		peta[i] = new Cell[N+1];
 	}
 	*/
-
-	
-	int start = 0;
-	int move;
 	
 	Player *p;
 	p = new Player();
 
-	while(start==0){
-		cout << "move : " ;
-		cin >> move;
-		if (move == 1) {
-			p->MoveUp();
-		}
-		else if (move == 2) {
-			p->MoveDown();
-		}
-		else if (move == 3) {
-			p->MoveLeft();
-		}
-		else if (move == 4) {
-			p->MoveRight();
-		}
-		else{
-			start = 1;
-		}
-		cout << p->getX() << "," << p->getY() << endl;
-	}
-
+	/*
 	Chicken *c1;
 	c1 = new Chicken();
 	c1->makeVoice();
@@ -97,6 +73,7 @@ int main(){
 	l1 = new Lamb();
 	l1->makeVoice();
 	cout << l1->getProduceMilk() << endl;
+	*/
 
 	Truck *t;
 	Mixer *m;
@@ -127,32 +104,59 @@ int main(){
 		}
 	}
 
-	for (int i = 1; i <= 3; i++){
-		if (i == 1){
-			cout << t->getKategori() << " ";		
+	int finish = 0;
+	while( finish != 1){
+	int start = 0;
+	int move;	 
+		while(start==0){
+		cout << "move : " ;
+		cin >> move;
+		if (move == 1) {
+			p->MoveUp();
 		}
-		else if (i == 2){
-			cout << m->getKategori() << " ";		
+		else if (move == 2) {
+			p->MoveDown();
+		}
+		else if (move == 3) {
+			p->MoveLeft();
+		}
+		else if (move == 4) {
+			p->MoveRight();
 		}
 		else{
-			cout << w->getKategori() << "  ";		
+			start = 1;
 		}
-		for (int j = 1; j <= 9; j++){
-			cout << c[j][i]->getKategori() << "  ";
-		}
-		cout << endl;
+		cout << p->getX() << "," << p->getY() << endl;
 	}
+		for (int i = 1; i <= 3; i++){
+			if (i == 1){
+				cout << t->getKategori() << " ";		
+			}
+			else if (i == 2){
+				cout << m->getKategori() << " ";		
+			}
+			else{
+				cout << w->getKategori() << "  ";		
+			}
+			for (int j = 1; j <= 9; j++){
+				cout << c[j][i]->getKategori() << "  ";
+			}
+			cout << endl;
+		}
 
-	for (int i = 1; i <= 7; i++){
-		for (int j = 1; j <= 5; j++){
-			cout << b[j][i]->getKategori() << "  ";
+		for (int i = 1; i <= 7; i++){
+			for (int j = 1; j <= 5; j++){
+				cout << b[j][i]->getKategori() << "  ";
+			}
+			for (int j = 1; j <= 5; j++){
+				cout << g[j][i]->getKategori() << " ";
+			}
+			cout << endl;
 		}
-		for (int j = 1; j <= 5; j++){
-			cout << g[j][i]->getKategori() << " ";
-		}
-		cout << endl;
+
+		cout << "finish = " << endl;
+		cin >> finish;
 	}
-
 	/*
 	p->Grow(*b,*c,*g);
 	cout << c[p->getX()+1][p->getY()]->IsOccupied() << endl;
