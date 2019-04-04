@@ -114,12 +114,12 @@ int main(){
 				GUI(N,peta,p,b,g,c,t,m,w,money);
 			} else if (command == "GROW"){
 				if ((p->getY()<=3) && (p->getX()>1)){
-					p -> Grow(c[p->getX()][p->getY()]);
+					p -> Grow(c[p->getX()-1][p->getY()]);
 				} else if (p->getY()>3){
 					if(p->getX()<=5){
-					p -> Grow(b[p->getX()+1][p->getY()-3]);
+					p -> Grow(b[p->getX()][p->getY()-3]);
 					} else{
-						p -> Grow(g[p->getX()-4][p->getY()-3]);
+						p -> Grow(g[p->getX()-5][p->getY()-3]);
 					}
 				}
 				GUI(N,peta,p,b,g,c,t,m,w,money);	
