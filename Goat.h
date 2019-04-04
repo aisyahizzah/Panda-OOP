@@ -1,15 +1,15 @@
-#ifndef COW_H
-#define COW_H
+#ifndef GOAT_H
+#define GOAT_H
 
 #include "FarmAnimal.h"
 #include "MilkProducing.h"
 #include "MeatProducing.h"
 
-class Cow : public MilkProducing, public MeatProducing, public Object{
+class Goat : public MilkProducing, public MeatProducing, public Object{
     public :
-        Cow();
-        Cow(int ,int );
-        ~Cow();
+        Goat();
+        Goat(int ,int );
+        ~Goat();
         void moveRandom();
         void makeVoice();
         void eat();
