@@ -1,5 +1,6 @@
 #include "Land.h"
 
+
 Land::Land() {
     occupied = false;
     rumput = false;

@@ -6,7 +6,7 @@ Duck::Duck(){
 }
 
 Duck::Duck(int x,int y){
-    setXY(x,y);
+    EggProducing::setXY(x,y);
 }
 
 Duck::~Duck(){
@@ -27,4 +27,11 @@ void Duck::eat(){
 
 void Duck::gotInteracted(){
 
+}
+void Duck::print(){
+    if (EggProducing::isHungry()){
+        cout << "| D!";
+    } else{
+        cout << "| D ";
+    }
 }

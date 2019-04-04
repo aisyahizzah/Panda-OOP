@@ -1,4 +1,5 @@
 #include "Land.h"
+#include "EggProducing.h"
 
 #ifndef COOP_H
 #define COOP_H

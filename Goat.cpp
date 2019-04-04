@@ -6,7 +6,7 @@ Goat::Goat(){
 }
 
 Goat::Goat(int x,int y){
-    setXY(x,y);
+    MilkProducing::setXY(x,y);
 }
 
 Goat::~Goat(){
@@ -26,4 +26,12 @@ void Goat::eat(){
 
 void Goat::gotInteracted(){
 
+}
+
+void Goat::print(){
+    if (MilkProducing::isHungry()){
+        cout << "| G!";
+    } else{
+        cout << "| G ";
+    }
 }

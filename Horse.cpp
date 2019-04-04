@@ -6,7 +6,7 @@ Horse::Horse(){
 }
 
 Horse::Horse(int x,int y){
-    setXY(x,y);
+    MeatProducing::setXY(x,y);
 }
 
 Horse::~Horse(){
@@ -26,4 +26,12 @@ void Horse::eat(){
 
 void Horse::gotInteracted(){
 
+}
+
+void Horse::print(){
+    if (MeatProducing::isHungry()){
+        cout << "| H!";
+    } else{
+        cout << "| H ";
+    }
 }

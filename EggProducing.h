@@ -4,13 +4,14 @@
 #include "FarmAnimal.h"
 #include "Coop.h"
 
-class EggProducing : public FarmAnimal{
+class EggProducing : public FarmAnimal,  public Object{
     private :
         bool produceEgg;
     public :
         EggProducing();
         virtual void moveRandom();
         virtual void makeVoice();
+        virtual void print();
         void eat(Coop);
         void gotInteracted();
         bool getProduceEgg();

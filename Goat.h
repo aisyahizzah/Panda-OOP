@@ -5,7 +5,7 @@
 #include "MilkProducing.h"
 #include "MeatProducing.h"
 
-class Goat : public MilkProducing, public MeatProducing, public Object{
+class Goat : public MilkProducing, public MeatProducing{
     public :
         Goat();
         Goat(int ,int );
@@ -14,6 +14,7 @@ class Goat : public MilkProducing, public MeatProducing, public Object{
         void makeVoice();
         void eat();
         void gotInteracted();
+        void print();
 };
 
 #endif

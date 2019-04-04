@@ -6,7 +6,7 @@ Cow::Cow(){
 }
 
 Cow::Cow(int x,int y){
-    setXY(x,y);
+    MilkProducing::setXY(x,y);
 }
 
 Cow::~Cow(){
@@ -27,4 +27,12 @@ void Cow::eat(){
 
 void Cow::gotInteracted(){
 
+}
+
+void Cow::print(){
+    if (MilkProducing::isHungry()){
+        cout << "| S!";
+    } else{
+        cout << "| S ";
+    }
 }

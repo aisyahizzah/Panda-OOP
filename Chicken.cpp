@@ -6,7 +6,7 @@ Chicken::Chicken(){
 }
 
 Chicken::Chicken(int x,int y){
-    setXY(x,y);
+    EggProducing::setXY(x,y);
 }
 
 Chicken::~Chicken(){
@@ -27,4 +27,12 @@ void Chicken::eat(){
 
 void Chicken::gotInteracted(){
 
+}
+
+void Chicken::print(){
+    if (EggProducing::isHungry()){
+        cout << "| C!";
+    } else{
+        cout << "| C ";
+    }
 }

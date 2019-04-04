@@ -14,3 +14,6 @@ int FarmAnimal::getHungry(){
 void FarmAnimal::setHungry(int h){
     hungry = h;
 }
+bool FarmAnimal::isHungry(){
+    return (hungry<=5);
+}

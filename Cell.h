@@ -13,12 +13,17 @@ class Cell {
 		int x;
 		int y;
 		string kategori;
+		string hewan;
+		int index_list_hewan;
 
 	public:
 		Cell();
 
+		void SetHewan(int index);
 		void SetKategori(string value);
 		string getKategori();
+		string getHewan();
+		int getIndex();
 
 		int getX();
 		int getY();

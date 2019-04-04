@@ -4,11 +4,12 @@
 #include "FarmAnimal.h"
 #include "Barn.h"
 
-class MeatProducing : public FarmAnimal{
+class MeatProducing : public FarmAnimal, public Object{
     public :
         MeatProducing();
         virtual void moveRandom();
         virtual void makeVoice();
+        virtual void print();
         void eat(Barn);
         void gotKilled();
 };

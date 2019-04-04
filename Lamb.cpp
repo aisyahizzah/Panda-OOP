@@ -6,7 +6,7 @@ Lamb::Lamb(){
 }
 
 Lamb::Lamb(int x,int y){
-    setXY(x,y);
+    MeatProducing::setXY(x,y);
 }
 
 Lamb::~Lamb(){
@@ -26,4 +26,12 @@ void Lamb::eat(){
 
 void Lamb::gotInteracted(){
 
+}
+
+void Lamb::print(){
+    if (MeatProducing::isHungry()){
+        cout << "| L!";
+    } else{
+        cout << "| L ";
+    }
 }

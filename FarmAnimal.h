@@ -4,7 +4,7 @@
 #include "Object.h"
 
 class FarmAnimal{
-    private :
+    protected :
         int hungry;
     public :
         ~FarmAnimal();
@@ -13,6 +13,7 @@ class FarmAnimal{
         virtual void eat();
         int getHungry();
         void setHungry(int);
+        bool isHungry();
 };
 
 #endif

@@ -1,17 +1,18 @@
 #include "EggProducing.h"
 
 EggProducing::EggProducing(){
-    setHungry(5);
+    setHungry(10);
     produceEgg = false;
 }
 
 void EggProducing::moveRandom(){}
 void EggProducing::makeVoice(){}
+void EggProducing::print(){}
 
 void EggProducing::eat(Coop c){
     if (c.IsRumputExist()){
         c.SetRumput(false);
-        setHungry(5);
+        setHungry(10);
         setProduceEgg(true);
     }
 }

@@ -1,17 +1,18 @@
 #include "MilkProducing.h"
 
 MilkProducing::MilkProducing(){
-    setHungry(5);
+    setHungry(10);
     produceMilk = false;
 }
 
 void MilkProducing::moveRandom(){}
 void MilkProducing::makeVoice(){}
+void MilkProducing::print(){}
 
 void MilkProducing::eat(Grassland g){
     if (g.IsRumputExist()){
         g.SetRumput(false);
-        setHungry(5);
+        setHungry(10);
         setProduceMilk(true);
     }
 }
