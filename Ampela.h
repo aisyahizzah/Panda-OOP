@@ -4,7 +4,7 @@
 #define AMPELA_H
 class Ampela : public FarmProduk{
     public:
-        Ampela();
+        Ampela(int);
         ~Ampela();
 };
 

@@ -4,7 +4,7 @@
 #define KAKIAYAM_H
 class KakiAyam : public FarmProduk{
     public:
-        KakiAyam();
+        KakiAyam(int);
         ~KakiAyam();
 };
 

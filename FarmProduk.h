@@ -1,4 +1,6 @@
 #include "Produk.h"
+#include <string>
+using namespace std;
 
 #ifndef FARMPRODUCT_H
 #define FARMPRODUCT_H
@@ -8,7 +10,7 @@ class FarmProduk : public Produk{
         static int n_farmproduk;
     public:
         FarmProduk();
-        FarmProduk(int );
+        FarmProduk(int, string);
         ~FarmProduk();
         static int Get_N_FarmProduk();
 };

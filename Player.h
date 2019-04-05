@@ -2,26 +2,25 @@
 #define PLAYER_H
 #include "Produk.h"
 #include "Object.h"
-#include "LinkedList.h"
+#include <vector>
 #include "MilkProducing.h"
 #include "MeatProducing.h"
 #include "EggProducing.h"
 #include "Well.h"
 #include "Truck.h"
 #include "Mixer.h"
-
+#include <iostream>
 #include "Chicken.h"
 #include "Cow.h"
 #include "Duck.h"
 #include "Goat.h"
 #include "Lamb.h"
-
 using namespace std;
 
 class Player: public Object{
 	private:
 		int WadahAir;
-		LinkedList <Produk> Tas;
+		vector <Produk> Tas;
 		int size_tas;
 		int money;
 		
@@ -35,17 +34,21 @@ class Player: public Object{
 		//getter
 		int getWadahAir();
 		int getNeffTas();
+		int getMoney();
 		
 		//setter
 		void setWadahAir(int _WadahAir);
+		void setMoney(int );
 		
 		bool isTasFull();
 		bool isTasEmpty();
 		bool isWadahAirFull();
 		bool isWadahAirEmpty();
 
+		void PrintTas();
 		void addProduk(Produk P);
-		void removeProduk(int indeks);
+		void removeProduk(string nama);
+		int removeAll();
 		
 		// Methods
 		void Talk(Chicken C);

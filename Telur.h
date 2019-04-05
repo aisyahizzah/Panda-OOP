@@ -4,7 +4,7 @@
 #define TELUR_H
 class Telur : public FarmProduk{
     public:
-        Telur();
+        Telur(int );
         ~Telur();
 };
 
