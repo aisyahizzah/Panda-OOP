@@ -9,10 +9,10 @@ int MilkProducing::moveRandom(Land*,Land*){}
 void MilkProducing::makeVoice(){}
 void MilkProducing::print(){}
 
-void MilkProducing::eat(Grassland g){
+void MilkProducing::eat(Land* g(*)[8]){
     if (g.IsRumputExist()){
         g.SetRumput(false);
-        setHungry(10);
+        setHungry(11);
         setProduceMilk(true);
     }
 }

@@ -190,7 +190,13 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
 					bool found = false;
 					while (count<=ListEggAnimal.count()&&!(found)){
 						if (((ListEggAnimal.get(count)->getX()-1)==j)&&((ListEggAnimal.get(count)->getY())==i)){
-							ListEggAnimal.get(count)->print();
+							if (ListEggAnimal.get(count)->EggProducing::getHungry()<=0){
+								ListEggAnimal.remove(ListEggAnimal.get(count));
+								cout << "| o ";
+								c[j][i]->SetOccupied(false);
+							} else{
+								ListEggAnimal.get(count)->print();
+							}
 							found = true;
 						} else{
 							count += 1;
@@ -220,7 +226,13 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
 					bool found = false;
 					while (count<=ListMeatAnimal.count()&&!(found)){
 						if (((ListMeatAnimal.get(count)->getX())==j)&&((ListMeatAnimal.get(count)->getY()-3)==i)){
-							ListMeatAnimal.get(count)->print();
+							if (ListMeatAnimal.get(count)->MeatProducing::getHungry()<=0){
+								ListMeatAnimal.remove(ListMeatAnimal.get(count));
+								cout << "| x ";
+								b[j][i]->SetOccupied(false);
+							} else{
+								ListMeatAnimal.get(count)->print();
+							}
 							found = true;
 						} else{
 							count += 1;
@@ -240,7 +252,13 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
 					bool found = false;
 					while (count<=ListMilkAnimal.count()&&!(found)){
 						if (((ListMilkAnimal.get(count)->getX()-5)==j)&&((ListMilkAnimal.get(count)->getY()-3)==i)){
-							ListMilkAnimal.get(count)->print();
+							if (ListMilkAnimal.get(count)->MilkProducing::getHungry()<=0){
+								ListMilkAnimal.remove(ListMilkAnimal.get(count));
+								cout << "| - ";
+								g[j][i]->SetOccupied(false);
+							} else{
+								ListMilkAnimal.get(count)->print();
+							}
 							found = true;
 						} else{
 							count += 1;
