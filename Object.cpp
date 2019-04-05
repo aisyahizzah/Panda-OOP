@@ -32,8 +32,11 @@ int Object::landType(){
     else if (_x >= 1 and _x <= 5 and _y >= 4){
         return 2; //barn
     }
-    else {
+    else if (_x >=6 and _x <=10 and y >=4){
         return 3; //grass
+    } 
+    else{
+        return 0;
     }
 }
 
@@ -47,7 +50,10 @@ int Object::landType(int x, int y){
     else if (_x >= 1 and _x <= 5 and _y >= 4){
         return 2; //barn
     }
-    else {
+    else if (_x >=6 and _x <=10 and y >=4){
         return 3; //grass
+    } 
+    else{
+        return 0;
     }
 }

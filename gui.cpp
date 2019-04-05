@@ -92,9 +92,9 @@ int main(){
 			cin >> command;
 			if (command == "MOVE"){
 				cin >> position;
-				if (c1->moveRandom((Land* (*)[4])c,(Land* (*)[8])g)==2){
-					ListEggAnimal.remove(c1);
+				if (c1->moveRandom((Land* (*)[4])c,(Land* (*)[8])b)==2){
 					ListMeatAnimal.add(c1);
+					ListEggAnimal.remove(c1);
 				}
 				if (position == "UP"){
 					p->MoveUp();
