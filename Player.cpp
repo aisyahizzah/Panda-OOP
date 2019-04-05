@@ -9,6 +9,7 @@ Player::Player(){
     setXY(10,1);
     WadahAir = 5;
     size_tas = 10;
+    money = 0;
     LinkedList <Produk> *Tas;
     Tas = new LinkedList <Produk>();
 }
@@ -17,6 +18,7 @@ Player::Player(){
 Player::~Player(){
     WadahAir = 0;
     size_tas = 0;
+    money = 0;
     delete[] &Tas; 
 }
         
