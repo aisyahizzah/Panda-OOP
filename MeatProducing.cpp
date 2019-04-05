@@ -3,7 +3,7 @@
 MeatProducing::MeatProducing(){
     setHungry(10);
 }
-void MeatProducing::moveRandom(Cell*,Cell*){
+void MeatProducing::moveRandom(Land*,Land*){
 
 }
 void MeatProducing::makeVoice(){}

@@ -92,6 +92,7 @@ int main(){
 			cin >> command;
 			if (command == "MOVE"){
 				cin >> position;
+				c1->moveRandom((Land* (*)[4])c,(Land* (*)[8])g);
 				if (position == "UP"){
 					p->MoveUp();
 					GUI(p,b,g,c,t,m,w,ListEggAnimal,ListMilkAnimal,ListMeatAnimal,money);

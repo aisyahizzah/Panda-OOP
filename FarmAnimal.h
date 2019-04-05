@@ -2,14 +2,14 @@
 #define FARMANIMAL_H
 
 #include "Object.h"
-#include "Cell.h"
+#include "Land.h"
 
 class FarmAnimal{
     protected :
         int hungry;
     public :
         ~FarmAnimal();
-        virtual void moveRandom(Cell*,Cell*); /*player gerak dulu lalu hewan, posisi hewan bergerak tidak boleh sama dengan player*/
+        virtual void moveRandom(Land*,Land*);
         virtual void makeVoice();
         virtual void eat();
         int getHungry();

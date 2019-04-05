@@ -10,7 +10,7 @@ class Lamb : public MilkProducing, public MeatProducing{
         Lamb();
         Lamb(int ,int );
         ~Lamb();
-        void moveRandom(Cell*,Cell*);
+        void moveRandom(Land*, Land*);
         void makeVoice();
         void eat();
         void gotInteracted();

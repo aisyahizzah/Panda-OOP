@@ -12,7 +12,7 @@ Horse::Horse(int x,int y){
 Horse::~Horse(){
     
 }
-void Horse::moveRandom(Cell*,Cell*){
+void Horse::moveRandom(Land*, Land*){
 
 }
         
