@@ -10,8 +10,7 @@ Player::Player(){
     WadahAir = 5;
     size_tas = 10;
     money = 0;
-    LinkedList <Produk> *Tas;
-    Tas = new LinkedList <Produk>();
+    vector <Produk> Tas;
 }
 
 //dtor
@@ -48,12 +47,48 @@ bool Player::isWadahAirEmpty(){
     return (WadahAir == 0);
 }
 
+void Player::PrintTas(){
+    for(int i=0;i<Tas.size();i++){
+        cout <<Tas[i].getNama()<<endl;
+    }
+}
 void Player::addProduk(Produk P){
-
+    Tas.push_back(P);
 }
-void Player::removeProduk(int indeks){
 
+void Player::removeProduk(string nama){
+    vector<Produk>::iterator it;
+    int i=0;
+    bool found=false;
+    string temp;
+    it = Tas.begin();
+    while(i<Tas.size() && !found){
+        if (Tas[i].getNama().compare(nama)==0){
+            found = true;
+        }else{
+          i++;
+          it++;
+        }
+    }
+    Tas.erase(it);
 }
+int Player::removeAll(){
+    vector<Produk>::iterator it;
+    int i=0;
+    string temp;
+    it = Tas.begin();
+    int sum = 0;
+    while(i<Tas.size()){
+        sum += Tas[i].getHarga();
+        cout << Tas[i].getHarga()<<endl;;
+        cout << Tas[i].getNama()<<endl;
+        Tas.erase(it);
+        i++;
+        it++;
+    }
+    return sum;
+}
+
 
 /*
     Interaksi & Manipulasi
