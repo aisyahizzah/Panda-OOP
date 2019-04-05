@@ -19,7 +19,7 @@ void Chicken::moveRandom(Cell* b[6][8], Cell* g[6][8]){
 }
         
 void Chicken::makeVoice(){
-    cout << "Chicken" << endl;
+    cout << "Kukuruyuk" << endl;
 }
 
 void Chicken::eat(){
