@@ -104,13 +104,19 @@ void Player::Grow(){
     y = getY();
 }
 void Player::Grow(Barn *b){
-    b->SetRumput(true);
+    if (getWadahAir() > 0){
+        b->SetRumput(true);
+    }
 }
 void Player::Grow(Coop *c){
-    c->SetRumput(true);
+    if (getWadahAir() > 0){
+        c->SetRumput(true);
+    }
 }
 void Player::Grow(Grassland *g){
-    g->SetRumput(true);
+    if (getWadahAir() > 0){
+        g->SetRumput(true);
+    }
 }
 
 /*

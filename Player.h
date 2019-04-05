@@ -6,6 +6,9 @@
 #include "MilkProducing.h"
 #include "MeatProducing.h"
 #include "EggProducing.h"
+#include "Well.h"
+#include "Truck.h"
+#include "Mixer.h"
 
 #include "Chicken.h"
 #include "Cow.h"
@@ -53,6 +56,9 @@ class Player: public Object{
 		void Interact(MilkProducing hewan);
 		void Interact(MeatProducing hewan);
 		void Interact(EggProducing hewan);
+		void Interact(Well );
+		void Interact(Truck );
+		void Interact(Mixer );
 		void Kill(MeatProducing hewan);
 		void Grow();
 		void Grow(Barn *b);
