@@ -95,11 +95,16 @@ int Player::removeAll(){
     int sum = 0;
     
     int tempsize = Tas.size();
-    while(i<tempsize){
-        sum += Tas[i].getHarga();
-        Tas.erase(it);
-        i++;
-        it++;
+    if (tempsize > 0){
+        while(i<tempsize){
+            sum += Tas[i].getHarga();
+            Tas.erase(it);
+            i++;
+            it++;
+        }
+    }
+    else{
+        throw "Inventory Kosong Exception\n";
     }
     return sum;
 }
@@ -159,7 +164,12 @@ void Player::Interact(Mixer m){
 
 void Player::Interact(Truck t){
     if ((getX()-1) == 1 and getY() == 1){
-        setMoney(getMoney() + removeAll());
+        try{
+            setMoney(getMoney() + removeAll());
+        }
+        catch(char const* e){
+            cout<<e<<endl;
+        }
     }
 }
 
