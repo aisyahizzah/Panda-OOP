@@ -34,9 +34,11 @@ class Player: public Object{
 		//getter
 		int getWadahAir();
 		int getNeffTas();
+		int getMoney();
 		
 		//setter
 		void setWadahAir(int _WadahAir);
+		void setMoney(int );
 		
 		bool isTasFull();
 		bool isTasEmpty();
