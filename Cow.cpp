@@ -13,7 +13,7 @@ Cow::~Cow(){
     
 }
 
-void Cow::moveRandom(Land*, Land*){
+int Cow::moveRandom(Land*, Land*){
 
 }
 

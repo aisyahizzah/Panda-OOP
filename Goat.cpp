@@ -12,7 +12,7 @@ Goat::Goat(int x,int y){
 Goat::~Goat(){
     
 }
-void Goat::moveRandom(Land*, Land*){
+int Goat::moveRandom(Land*, Land*){
 
 }
         

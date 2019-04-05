@@ -13,6 +13,7 @@ class Object{
         //Setter
         void setXY(int, int);
         int landType();//1 = Coop, 2 = Barn, 3 = Grass
+        int landType(int x, int y);
 };
 
 #endif

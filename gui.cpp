@@ -82,7 +82,7 @@ int main(){
 	Lamb *l1 = new Lamb(1,4);
 	b[l1->MeatProducing::getX()][l1->MeatProducing::getY()-3]->SetOccupied(true); 
 	ListMeatAnimal.add(l1);
-	Horse *h1 = new Horse(2,4);
+	Horse *h1 = new Horse(1,5);
 	b[h1->MeatProducing::getX()][h1->MeatProducing::getY()-3]->SetOccupied(true);
 	ListMeatAnimal.add(h1);
 
@@ -92,7 +92,10 @@ int main(){
 			cin >> command;
 			if (command == "MOVE"){
 				cin >> position;
-				c1->moveRandom((Land* (*)[4])c,(Land* (*)[8])g);
+				if (c1->moveRandom((Land* (*)[4])c,(Land* (*)[8])g)==2){
+					ListEggAnimal.remove(c1);
+					ListMeatAnimal.add(c1);
+				}
 				if (position == "UP"){
 					p->MoveUp();
 					GUI(p,b,g,c,t,m,w,ListEggAnimal,ListMilkAnimal,ListMeatAnimal,money);

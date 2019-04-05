@@ -10,7 +10,7 @@ class Chicken : public EggProducing, public MeatProducing{
         Chicken();
         Chicken(int ,int );
         ~Chicken();
-        void moveRandom(Land* c[10][4], Land* g[6][8]);
+        int moveRandom(Land* c[10][4], Land* g[6][8]);
         void makeVoice();
         void eat();
         void gotInteracted();
