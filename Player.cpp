@@ -80,8 +80,6 @@ int Player::removeAll(){
     int sum = 0;
     while(i<Tas.size()){
         sum += Tas[i].getHarga();
-        cout << Tas[i].getHarga()<<endl;;
-        cout << Tas[i].getNama()<<endl;
         Tas.erase(it);
         i++;
         it++;
