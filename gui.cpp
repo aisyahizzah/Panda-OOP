@@ -47,6 +47,12 @@ int main(){
 	//init
 	Player *p;
 	p = new Player();
+	//tes buat tas, truck
+	Daging *dd = new Daging(100);
+    p->addProduk(*dd);
+    p->addProduk(*dd);
+    p->addProduk(*dd);
+	//
 	string command;
 	string position;
 	int money = 0;
@@ -238,14 +244,14 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
 				}
 			}
             if (i==1){
-                cout << "| Inventory :                 |"<<endl;
+                cout << "| Inventory :                 |"<<endl;	
                 cout << "-----------------------------------------                             -" <<endl;
             } else if (i==5) {
                 cout << "|                             |"<<endl;
                 cout << "-----------------------------------------------------------------------" <<endl;
             } else if (i==6) {
                 cout << "| Money : ";
-				cout << money;
+				cout << p->getMoney(); //ngeprint money
 				for(int i = 1; i <= 20 - (sizeof(money)/4); i++){
 					cout << " ";
 				}
@@ -264,4 +270,6 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
                 cout << "-----------------------------------------                             -"<<endl;
             }
         }
+		cout << "| Inventory :                 |"<<endl;
+		p->PrintTas(); //ngeprint isi tas
 }

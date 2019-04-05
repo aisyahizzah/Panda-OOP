@@ -41,10 +41,10 @@ void Player::setMoney(int money){
 }
 
 bool Player::isTasFull(){
-    return 0;
+    return (Tas.size() == 10);
 }
 bool Player::isTasEmpty(){
-    return 0;
+    return (Tas.size() == 0);
 }
 bool Player::isWadahAirFull(){
     return (WadahAir == 5);
@@ -127,6 +127,7 @@ void Player::Interact(MilkProducing hewan){
     hewan.setProduceMilk(true);
     addProduk(Produk(1000));
     */
+   
 }
 
 void Player::Interact(MeatProducing hewan){
