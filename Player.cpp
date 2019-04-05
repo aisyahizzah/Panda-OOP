@@ -7,7 +7,7 @@
 // ctor
 Player::Player(){
     setXY(10,1);
-    WadahAir = 0;
+    WadahAir = 5;
     size_tas = 10;
     LinkedList <Produk> *Tas;
     Tas = new LinkedList <Produk>();
@@ -93,6 +93,28 @@ void Player::Interact(MeatProducing hewan){
 void Player::Interact(EggProducing hewan){
     
 }
+
+void Player::Interact(Mixer m){
+    if ((getX()-1) == 1 and getY() == 2){
+        
+    }
+}
+
+void Player::Interact(Truck t){
+    if ((getX()-1) == 1 and getY() == 1){
+        
+    }
+}
+
+void Player::Interact(Well w){
+    if ((getX()-1) == 1 and getY() == 3){
+        setWadahAir(5);
+    }
+    else if (getX() == 1 and (getY()-1) == 3){
+        setWadahAir(5);
+    }
+}
+
 void Player::Kill(MeatProducing hewan){
     int x, y;
     x = getX();
@@ -104,13 +126,22 @@ void Player::Grow(){
     y = getY();
 }
 void Player::Grow(Barn *b){
-    b->SetRumput(true);
+    if (getWadahAir() > 0 and b->IsRumputExist() == false){
+        b->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
+    }
 }
 void Player::Grow(Coop *c){
-    c->SetRumput(true);
+    if (getWadahAir() > 0 and c->IsRumputExist() == false){
+        c->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
+    }
 }
 void Player::Grow(Grassland *g){
-    g->SetRumput(true);
+    if (getWadahAir() > 0 and g->IsRumputExist() == false){
+        g->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
+    }
 }
 
 /*
@@ -136,8 +167,13 @@ void Player::Mix(){
 
 //Move
 void Player::MoveUp(){
-    if ( (getY()-1) >= 1 ) {
-        setXY(getX(),getY()-1);
+    if ( (getY()-1) == 3 and getX() == 1  ) {
+        // player not move, ada facility
+    }
+    else {
+        if ( (getY()-1) >= 1 ) {
+            setXY(getX(),getY()-1);
+        }
     }
 }
 void Player::MoveDown(){
@@ -146,8 +182,13 @@ void Player::MoveDown(){
     }
 }
 void Player::MoveLeft(){
-    if ( (getX()-1) >= 1 ) {
-        setXY(getX()-1,getY());
+    if ( (getX()-1) == 1 and getY() <= 3 ) {
+        // player not move, ada facility
+    }
+    else {
+        if ( (getX()-1) >= 1 ) {
+            setXY(getX()-1,getY());
+        }
     }
 }
 void Player::MoveRight(){
