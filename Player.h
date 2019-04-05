@@ -23,6 +23,7 @@ class Player: public Object{
 		int WadahAir;
 		LinkedList <Produk> Tas;
 		int size_tas;
+		int money;
 		
 	public:
 		// ctor
