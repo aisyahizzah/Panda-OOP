@@ -4,7 +4,7 @@
 #define IGA_H
 class Iga : public FarmProduk{
     public:
-        Iga();
+        Iga(int);
         ~Iga();
 };
 

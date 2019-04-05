@@ -4,7 +4,7 @@
 #define JEROAN_H
 class Jeroan : public FarmProduk{
     public:
-        Jeroan();
+        Jeroan(int);
         ~Jeroan();
 };
 

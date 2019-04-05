@@ -5,7 +5,7 @@
 
 class EggYolk : public SideProduk {
     public:
-        EggYolk();
+        EggYolk(int);
         ~EggYolk();
 };
 
