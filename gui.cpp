@@ -1,4 +1,4 @@
-//g++ gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp -o main 
+//g++ gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp Produk.cpp FarmProduk.cpp SideProduk.cpp Daging.cpp Susu.cpp Telur.cpp Ampela.cpp EggYolk.cpp Iga.cpp Jeroan.cpp KakiAyam.cpp Tenderloin.cpp -o main 
 
 #include "Cell.h"
 #include "Mixer.h"
@@ -22,6 +22,18 @@
 #include "Goat.h"
 #include "Horse.h"
 #include "Lamb.h"
+#include "Produk.h"
+#include "SideProduk.h"
+#include "FarmProduk.h"
+#include "Telur.h"
+#include "Susu.h"
+#include "Daging.h"
+#include "Tenderloin.h"
+#include "KakiAyam.h"
+#include "Jeroan.h"
+#include "EggYolk.h"
+#include "Ampela.h"
+#include "Iga.h"
 #include <list>
 #include <cstring>
 #include <iostream>
