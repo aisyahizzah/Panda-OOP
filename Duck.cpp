@@ -13,7 +13,7 @@ Duck::~Duck(){
     
 }
 
-void Duck::moveRandom(Land*, Land*){
+int Duck::moveRandom(Land*, Land*){
 
 }
         

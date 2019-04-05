@@ -5,7 +5,7 @@ EggProducing::EggProducing(){
     produceEgg = false;
 }
 
-void EggProducing::moveRandom(Land*, Land*){}
+int EggProducing::moveRandom(Land*, Land*){}
 void EggProducing::makeVoice(){}
 void EggProducing::print(){}
 

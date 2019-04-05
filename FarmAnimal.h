@@ -9,7 +9,7 @@ class FarmAnimal{
         int hungry;
     public :
         ~FarmAnimal();
-        virtual void moveRandom(Land*,Land*);
+        virtual int moveRandom(Land*,Land*);
         virtual void makeVoice();
         virtual void eat();
         int getHungry();

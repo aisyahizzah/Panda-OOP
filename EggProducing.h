@@ -9,7 +9,7 @@ class EggProducing : public FarmAnimal,  public Object{
         bool produceEgg;
     public :
         EggProducing();
-        virtual void moveRandom(Land*, Land*);
+        virtual int moveRandom(Land*, Land*);
         virtual void makeVoice();
         virtual void print();
         void eat(Coop);

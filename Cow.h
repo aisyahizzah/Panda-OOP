@@ -10,7 +10,7 @@ class Cow : public MilkProducing, public MeatProducing{
         Cow();
         Cow(int ,int );
         ~Cow();
-        void moveRandom(Land*, Land*);
+        int moveRandom(Land*, Land*);
         void makeVoice();
         void eat();
         void gotInteracted();

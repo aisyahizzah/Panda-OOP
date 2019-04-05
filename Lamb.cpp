@@ -12,7 +12,7 @@ Lamb::Lamb(int x,int y){
 Lamb::~Lamb(){
     
 }
-void Lamb::moveRandom(Land*, Land*){
+int Lamb::moveRandom(Land*, Land*){
 
 }
         

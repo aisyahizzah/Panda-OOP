@@ -14,16 +14,20 @@ Chicken::~Chicken(){
     
 }
 
-void Chicken::moveRandom(Land* c[10][4], Land* g[6][8]){
+int Chicken::moveRandom(Land* c[10][4], Land* b[6][8]){
     if (EggProducing::hungry%5==0){
-        if (this->EggProducing::landType()==1){
-            c[1][1]->SetOccupied(false);
+        if ((EggProducing::landType(EggProducing::getX(),EggProducing::getY()+1)==1)){
+            if (!(c[EggProducing::getX()-1][EggProducing::getY()+1]->IsOccupied())){
+                c[EggProducing::getX()-1][EggProducing::getY()]->SetOccupied(false);
+                this->EggProducing::setXY(EggProducing::getX(),EggProducing::getY()+1);
+                c[EggProducing::getX()-1][EggProducing::getY()]->SetOccupied(true);
+            }
+            return 1;
+        } else if ((EggProducing::landType(EggProducing::getX(),EggProducing::getY()+1)==2)){
+            return 2;
         }
-        this->EggProducing::setXY(EggProducing::getX(),EggProducing::getY()+1);
-        if (this->EggProducing::landType()==1){
-            c[1][2]->SetOccupied(true);
-        }
-
+        
+        //EggProducing::hungry -= 1;
     }
 }
         
