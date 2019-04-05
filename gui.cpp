@@ -37,7 +37,7 @@ int main(){
 	p = new Player();
 	string command;
 	string position;
-	int money = 0;
+	int money = 5;
 
 	Truck *t; t = new Truck();
 	Mixer *m; m = new Mixer();
@@ -84,7 +84,7 @@ int main(){
 	Lamb *l1 = new Lamb(1,4);
 	b[l1->MeatProducing::getX()][l1->MeatProducing::getY()-3]->SetOccupied(true); 
 	ListMeatAnimal.add(l1);
-	Horse *h1 = new Horse(1,5);
+	Horse *h1 = new Horse(1,10);
 	b[h1->MeatProducing::getX()][h1->MeatProducing::getY()-3]->SetOccupied(true);
 	ListMeatAnimal.add(h1);
 
@@ -98,6 +98,11 @@ int main(){
 					ListMeatAnimal.add(c1);
 					ListEggAnimal.remove(c1);
 				}
+				if (d1->moveRandom((Land* (*)[4])c,(Land* (*)[8])b)==2){}
+				if (g1->moveRandom((Land* (*)[8])b,(Land* (*)[8])g)==2){}
+				if (s1->moveRandom((Land* (*)[8])b,(Land* (*)[8])g)==2){}
+				if (l1->moveRandom((Land* (*)[8])b,(Land* (*)[8])g)==2){}
+				if (h1->moveRandom((Land* (*)[8])b,(Land* (*)[8])g)==2){}
 				if (position == "UP"){
 					p->MoveUp();
 					GUI(p,b,g,c,t,m,w,ListEggAnimal,ListMilkAnimal,ListMeatAnimal,money);

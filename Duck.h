@@ -10,7 +10,7 @@ class Duck : public EggProducing, public MeatProducing{
         Duck();
         Duck(int ,int );
         ~Duck();
-        int moveRandom(Land*, Land*);
+        int moveRandom(Land* c[10][4], Land* b[6][8]);
         void makeVoice();
         void eat();
         void gotInteracted();

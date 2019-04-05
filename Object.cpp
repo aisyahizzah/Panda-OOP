@@ -26,7 +26,7 @@ int Object::landType(){
     _x = getX();
     _y = getY();
     //asumsi Object selalu di land
-    if (_x >= 2 and _y <= 3){
+    if (_x >= 2 and _x <= 10 and _y >= 1 and y<=3){
         return 1; //coop
     }
     else if (_x >= 1 and _x <= 5 and _y >= 4){
@@ -44,13 +44,13 @@ int Object::landType(int x, int y){
     int _x = x;
     int _y = y;
     //asumsi Object selalu di land
-    if (_x >= 2 and _y <= 3){
+    if (_x >= 2 and _x <= 10 and _y >= 1 and y<=3){
         return 1; //coop
     }
-    else if (_x >= 1 and _x <= 5 and _y >= 4){
+    else if (_x >= 1 and _x <= 5 and _y >= 4 and y<=10){
         return 2; //barn
     }
-    else if (_x >=6 and _x <=10 and y >=4){
+    else if (_x >=6 and _x <=10 and y >=4 and y<=10){
         return 3; //grass
     } 
     else{
