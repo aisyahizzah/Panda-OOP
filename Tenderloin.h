@@ -5,7 +5,7 @@
 
 class Tenderloin : public SideProduk {
     public:
-        Tenderloin();
+        Tenderloin(int);
         ~Tenderloin();
 };
 
