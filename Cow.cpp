@@ -13,8 +13,8 @@ Cow::~Cow(){
     
 }
 
-void Cow::moveRandom(){
-    
+void Cow::moveRandom(Cell*,Cell*){
+
 }
 
 void Cow::makeVoice(){

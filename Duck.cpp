@@ -13,7 +13,7 @@ Duck::~Duck(){
     
 }
 
-void Duck::moveRandom(){
+void Duck::moveRandom(Cell*,Cell*){
 
 }
         

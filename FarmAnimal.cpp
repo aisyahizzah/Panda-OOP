@@ -4,7 +4,7 @@ FarmAnimal::~FarmAnimal(){
 
 }
 
-void FarmAnimal::moveRandom(){}
+void FarmAnimal::moveRandom(Cell*,Cell*){}
 void FarmAnimal::makeVoice(){}
 void FarmAnimal::eat(){}
 

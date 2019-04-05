@@ -5,7 +5,7 @@ EggProducing::EggProducing(){
     produceEgg = false;
 }
 
-void EggProducing::moveRandom(){}
+void EggProducing::moveRandom(Cell*,Cell*){}
 void EggProducing::makeVoice(){}
 void EggProducing::print(){}
 

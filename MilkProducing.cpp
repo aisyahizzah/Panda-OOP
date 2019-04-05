@@ -5,7 +5,7 @@ MilkProducing::MilkProducing(){
     produceMilk = false;
 }
 
-void MilkProducing::moveRandom(){}
+void MilkProducing::moveRandom(Cell*,Cell*){}
 void MilkProducing::makeVoice(){}
 void MilkProducing::print(){}
 
