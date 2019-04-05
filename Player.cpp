@@ -28,10 +28,16 @@ int Player::getWadahAir(){
 int Player::getNeffTas(){
     return size_tas;
 }
+int Player::getMoney(){
+    return money;
+}
 
 //setter
 void Player::setWadahAir(int _WadahAir){
     WadahAir = _WadahAir;
+}
+void Player::setMoney(int money){
+    this->money = money;
 }
 
 bool Player::isTasFull(){
@@ -137,7 +143,7 @@ void Player::Interact(Mixer m){
 
 void Player::Interact(Truck t){
     if ((getX()-1) == 1 and getY() == 1){
-        
+        setMoney(getMoney() + removeAll());
     }
 }
 
