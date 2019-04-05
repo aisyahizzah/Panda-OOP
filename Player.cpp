@@ -94,12 +94,25 @@ void Player::Interact(EggProducing hewan){
     
 }
 
-void Player::Interact(Mixer m){}
+void Player::Interact(Mixer m){
+    if ((getX()-1) == 1 and getY() == 2){
+        
+    }
+}
 
-void Player::Interact(Truck t){}
+void Player::Interact(Truck t){
+    if ((getX()-1) == 1 and getY() == 1){
+        
+    }
+}
 
 void Player::Interact(Well w){
-    setWadahAir(5);
+    if ((getX()-1) == 1 and getY() == 3){
+        setWadahAir(5);
+    }
+    else if (getX() == 1 and (getY()-1) == 3){
+        setWadahAir(5);
+    }
 }
 
 void Player::Kill(MeatProducing hewan){
