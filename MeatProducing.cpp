@@ -21,5 +21,5 @@ void MeatProducing::eat(Barn b){
     }
 }
 void MeatProducing::gotKilled(){
-    MeatProducing::~MeatProducing();
+        
 }
