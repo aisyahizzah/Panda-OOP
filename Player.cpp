@@ -106,16 +106,19 @@ void Player::Grow(){
 void Player::Grow(Barn *b){
     if (getWadahAir() > 0){
         b->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
     }
 }
 void Player::Grow(Coop *c){
     if (getWadahAir() > 0){
         c->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
     }
 }
 void Player::Grow(Grassland *g){
     if (getWadahAir() > 0){
         g->SetRumput(true);
+        setWadahAir(getWadahAir()-1);
     }
 }
 
