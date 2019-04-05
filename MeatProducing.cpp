@@ -3,6 +3,11 @@
 MeatProducing::MeatProducing(){
     setHungry(10);
 }
+
+MeatProducing::~MeatProducing(){
+
+}
+
 int MeatProducing::moveRandom(Land*,Land*){
 
 }
@@ -16,5 +21,5 @@ void MeatProducing::eat(Barn b){
     }
 }
 void MeatProducing::gotKilled(){
-    
+        
 }

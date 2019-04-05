@@ -1,4 +1,4 @@
-//g++ gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp -o main 
+//g++ gui.cpp Player.cpp Object.cpp Cell.cpp Land.cpp Facility.cpp Coop.cpp Barn.cpp Grassland.cpp Truck.cpp Mixer.cpp Well.cpp FarmAnimal.cpp MeatProducing.cpp MilkProducing.cpp EggProducing.cpp Chicken.cpp Cow.cpp Duck.cpp Goat.cpp Horse.cpp Lamb.cpp Produk.cpp FarmProduk.cpp SideProduk.cpp Daging.cpp Susu.cpp Telur.cpp Ampela.cpp EggYolk.cpp Iga.cpp Jeroan.cpp KakiAyam.cpp Tenderloin.cpp -o main 
 
 #include "Cell.h"
 #include "Mixer.h"
@@ -22,6 +22,18 @@
 #include "Goat.h"
 #include "Horse.h"
 #include "Lamb.h"
+#include "Produk.h"
+#include "SideProduk.h"
+#include "FarmProduk.h"
+#include "Telur.h"
+#include "Susu.h"
+#include "Daging.h"
+#include "Tenderloin.h"
+#include "KakiAyam.h"
+#include "Jeroan.h"
+#include "EggYolk.h"
+#include "Ampela.h"
+#include "Iga.h"
 #include <list>
 #include <cstring>
 #include <iostream>
@@ -35,6 +47,12 @@ int main(){
 	//init
 	Player *p;
 	p = new Player();
+	//tes buat tas, truck
+	Daging *dd = new Daging(100);
+    p->addProduk(*dd);
+    p->addProduk(*dd);
+    p->addProduk(*dd);
+	//
 	string command;
 	string position;
 	int money = 5;
@@ -231,14 +249,14 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
 				}
 			}
             if (i==1){
-                cout << "| Inventory :                 |"<<endl;
+                cout << "| Inventory :                 |"<<endl;	
                 cout << "-----------------------------------------                             -" <<endl;
             } else if (i==5) {
                 cout << "|                             |"<<endl;
                 cout << "-----------------------------------------------------------------------" <<endl;
             } else if (i==6) {
                 cout << "| Money : ";
-				cout << money;
+				cout << p->getMoney(); //ngeprint money
 				for(int i = 1; i <= 20 - (sizeof(money)/4); i++){
 					cout << " ";
 				}
@@ -257,4 +275,6 @@ void GUI(Player* p, Barn* b[6][8], Grassland* g[6][8], Coop* c[10][4], Truck* t,
                 cout << "-----------------------------------------                             -"<<endl;
             }
         }
+		cout << "| Inventory :                 |"<<endl;
+		p->PrintTas(); //ngeprint isi tas
 }
