@@ -15,7 +15,11 @@ Chicken::~Chicken(){
 }
 
 void Chicken::moveRandom(Cell* b[6][8], Cell* g[6][8]){
-
+    if (EggProducing::hungry%5==0){
+        EggProducing::setXY(EggProducing::getX(),EggProducing::getY()+1);
+    } else if (EggProducing::hungry%5==1){
+        
+    }
 }
         
 void Chicken::makeVoice(){
