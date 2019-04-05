@@ -26,6 +26,8 @@ int Cow::moveRandom(Land* b[6][8], Land* g[6][8]){
                 return 1;
             }
         }
+    } else{
+        return 3;
     }
 }
 
