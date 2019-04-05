@@ -1,5 +1,6 @@
 #include "Chicken.h"
 #include <iostream>
+
 using namespace std;
 Chicken::Chicken(){
     
@@ -13,7 +14,7 @@ Chicken::~Chicken(){
     
 }
 
-void Chicken::moveRandom(){
+void Chicken::moveRandom(Cell* b[6][8], Cell* g[6][8]){
 
 }
         

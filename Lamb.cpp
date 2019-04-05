@@ -12,7 +12,7 @@ Lamb::Lamb(int x,int y){
 Lamb::~Lamb(){
     
 }
-void Lamb::moveRandom(){
+void Lamb::moveRandom(Cell*,Cell*){
 
 }
         

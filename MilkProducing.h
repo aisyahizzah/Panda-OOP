@@ -10,7 +10,7 @@ class MilkProducing : public FarmAnimal, public Object{
         bool produceMilk;
     public :
         MilkProducing();
-        virtual void moveRandom();
+        virtual void moveRandom(Cell*,Cell*);
         virtual void makeVoice();
         virtual void print();
         void eat(Grassland);
