@@ -136,8 +136,13 @@ void Player::Mix(){
 
 //Move
 void Player::MoveUp(){
-    if ( (getY()-1) >= 1 ) {
-        setXY(getX(),getY()-1);
+    if ( (getY()-1) == 3 and getX() == 1  ) {
+        // player not move, ada facility
+    }
+    else {
+        if ( (getY()-1) >= 1 ) {
+            setXY(getX(),getY()-1);
+        }
     }
 }
 void Player::MoveDown(){
@@ -146,8 +151,13 @@ void Player::MoveDown(){
     }
 }
 void Player::MoveLeft(){
-    if ( (getX()-1) >= 1 ) {
-        setXY(getX()-1,getY());
+    if ( (getX()-1) == 1 and getY() <= 3 ) {
+        // player not move, ada facility
+    }
+    else {
+        if ( (getX()-1) >= 1 ) {
+            setXY(getX()-1,getY());
+        }
     }
 }
 void Player::MoveRight(){
