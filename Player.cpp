@@ -3,6 +3,15 @@
 #include "Coop.h"
 #include "Grassland.h"
 #include "Produk.h"
+#include "Telur.h"
+#include "Susu.h"
+#include "Daging.h"
+#include "Tenderloin.h"
+#include "KakiAyam.h"
+#include "Jeroan.h"
+#include "EggYolk.h"
+#include "Ampela.h"
+#include "Iga.h"
 
 // ctor
 Player::Player(){
@@ -123,19 +132,23 @@ void Player::Talk(Lamb L){
 }
 
 void Player::Interact(MilkProducing hewan){
-    /*
-    hewan.setProduceMilk(true);
-    addProduk(Produk(1000));
-    */
-   
+    if (hewan.getProduceMilk()){
+        Susu *ss = new Susu(10000);
+        addProduk(*ss);
+        hewan.setProduceMilk(false);   
+    }
 }
 
 void Player::Interact(MeatProducing hewan){
-
+    //tidak terjadi apa2
 }
 
 void Player::Interact(EggProducing hewan){
-    
+    if (hewan.getProduceEgg()){
+        Telur *tt = new Telur(10000);
+        addProduk(*tt);
+        hewan.setProduceEgg(false);   
+    }
 }
 
 void Player::Interact(Mixer m){
@@ -150,6 +163,7 @@ void Player::Interact(Truck t){
     }
 }
 
+
 void Player::Interact(Well w){
     if ((getX()-1) == 1 and getY() == 3){
         setWadahAir(5);
@@ -160,15 +174,16 @@ void Player::Interact(Well w){
 }
 
 void Player::Kill(MeatProducing hewan){
-    int x, y;
-    x = getX();
-    y = getY();
+    Daging *dd = new Daging(30000);
+    addProduk(*dd);   
+    hewan.gotKilled();
 }
 void Player::Grow(){
     int x, y;
     x = getX();
     y = getY();
 }
+
 void Player::Grow(Barn *b){
     if (getWadahAir() > 0 and b->IsRumputExist() == false){
         b->SetRumput(true);

@@ -7,6 +7,7 @@
 class MeatProducing : public FarmAnimal, public Object{
     public :
         MeatProducing();
+        ~MeatProducing();
         virtual int moveRandom(Land*,Land*);
         virtual void makeVoice();
         virtual void print();
