@@ -7,7 +7,7 @@
 // ctor
 Player::Player(){
     setXY(10,1);
-    WadahAir = 0;
+    WadahAir = 5;
     size_tas = 10;
     LinkedList <Produk> *Tas;
     Tas = new LinkedList <Produk>();
@@ -93,6 +93,15 @@ void Player::Interact(MeatProducing hewan){
 void Player::Interact(EggProducing hewan){
     
 }
+
+void Player::Interact(Mixer m){}
+
+void Player::Interact(Truck t){}
+
+void Player::Interact(Well w){
+    setWadahAir(5);
+}
+
 void Player::Kill(MeatProducing hewan){
     int x, y;
     x = getX();
@@ -104,19 +113,19 @@ void Player::Grow(){
     y = getY();
 }
 void Player::Grow(Barn *b){
-    if (getWadahAir() > 0){
+    if (getWadahAir() > 0 and b->IsRumputExist() == false){
         b->SetRumput(true);
         setWadahAir(getWadahAir()-1);
     }
 }
 void Player::Grow(Coop *c){
-    if (getWadahAir() > 0){
+    if (getWadahAir() > 0 and c->IsRumputExist() == false){
         c->SetRumput(true);
         setWadahAir(getWadahAir()-1);
     }
 }
 void Player::Grow(Grassland *g){
-    if (getWadahAir() > 0){
+    if (getWadahAir() > 0 and g->IsRumputExist() == false){
         g->SetRumput(true);
         setWadahAir(getWadahAir()-1);
     }

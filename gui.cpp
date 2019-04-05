@@ -109,6 +109,7 @@ int main(){
 				cout << " " << command <<endl;
 				GUI(p,b,g,c,t,m,w,ListEggAnimal,ListMilkAnimal,ListMeatAnimal,money);
 			} else if (command == "INTERACT"){
+				p->Interact(*w);
 				cout << " " << command <<endl;
 				GUI(p,b,g,c,t,m,w,ListEggAnimal,ListMilkAnimal,ListMeatAnimal,money);
 			} else if (command == "KILL"){
