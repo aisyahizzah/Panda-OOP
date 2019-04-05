@@ -43,6 +43,9 @@ int main(){
 
     Daging *dd = new Daging(100);
     p->addProduk(*dd);
+    p->addProduk(*dd);
+    p->addProduk(*dd);
     p->PrintTas();
+    cout << p->removeAll();
 
 }

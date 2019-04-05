@@ -84,7 +84,9 @@ int Player::removeAll(){
     string temp;
     it = Tas.begin();
     int sum = 0;
-    while(i<Tas.size()){
+    
+    int tempsize = Tas.size();
+    while(i<tempsize){
         sum += Tas[i].getHarga();
         Tas.erase(it);
         i++;
